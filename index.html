@@ -264,33 +264,43 @@ Trading information complexity for error,
 
 
 <li>
-<a href="https://imada.sdu.dk/u/joan/" target="_blank">Joan Boyar</a>, 
-<a href="https://www.eecs.yorku.ca/~kamalis/" target="_blank">Shahin Kamali</a>, 
-<a href="https://www.imada.sdu.dk/u/kslarsen/" target="_blank">Kim S. Larsen</a>, 
-Ali Mohammad Lavasani, Yaqiao Li, 
-<a href="https://users.encs.concordia.ca/~denisp/" target="_blank">Denis Pankratov</a>, On the Online Weighted Non-Crossing Matching Problem,
-<i>SWAT 2024</i>.
-<a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SWAT.2024.16" target="_blank">SWAT conference version</a>.
+Yaqiao Li, Mahtab Masoori, 
+<a href="https://users.encs.concordia.ca/~lata/" target="_blank">Lata Narayanan</a>,
+<a href="https://users.encs.concordia.ca/~denisp/" target="_blank">Denis Pankratov</a>, Renting servers for multi-parameter jobs in the cloud,
+<i>ICDCN 2025 (<b>best paper!</b>)</i>.
+<a href="https://dl.acm.org/doi/10.1145/3700838.3700850" target="_blank">ICDCN conference version</a>.
+<a href="https://arxiv.org/abs/2404.15444" target="_blank">arXiv:2404.15444</a>.
 </li>
 <i>
 <details>
     <summary>click for a Summary:</summary>
-    Matching is a common task in nature, society, and mathematics. Avoiding crossing (of matching lines/curves) is a desired sometimes indispensable condition, such as for circuit design and understanding RNA structures, etc. 
+    Computing in cloud has many advantages that leads to overall better social welfare, e.g., some companies such as in gaming industry rent servers from public cloud companies for their computational tasks. A basic problem is how to schedule diverse requirements to minimize cost of running cloud servers, this is a dynamic vector bin packing problem called RSiC.
+
+	<div class="row">
+  		<div class="column2">
+	  		<figure>
+		   		<img src="RSiC_cloud_servers.png" class="center" style="width:35%" class="center">
+		    	<figcaption>Fig a: Servers in the cloud (AI generated image, credit to tongyi[通义]).
+				</figcaption>
+			</figure>
+  		</div>
+  		<div class="column2">
+  			<figure>
+   				<img src="OHC_VBP.png" alt="pic"  style="width:38%" class="center">
+    			<figcaption>Fig b: A picture of high dimensional bin packing in AI's mind (AI generated image, credit to tongyi[通义]).
+				</figcaption>
+			</figure>
+  		</div>
+	</div>
+
+    This paper, among other results, proposed a new and natural greedy-type algorithm that we call 'Greedy', and demonstrated in simulation that it outperforms other existing algorithms in the majority of cases. Thus, 'Greedy' could be useful for industrial applications.
 
     <figure>
-         <img src="non_crossing_matching_RNA.png" class="center" style="width:40%" class="center">
-      <figcaption>Fig a: A picture showing how RNA is related to k-noncrossing matching from 
-               <a href="https://arxiv.org/abs/0906.5553" target="_blank">this paper</a>.
-      </figcaption>
-   </figure>
+   		<img src="RSiC_greedy.png" class="center" style="width:60%" class="center">
+    	<figcaption>Fig c: Simulation shows our 'Greedy' algorithm outperforms other algorithms.
+		</figcaption>
+	</figure>
 
-    This paper introduced the online and weighted version of the non-crossing matching problem, and gave optimal or competitive online algorithms and lower bounds in various models. In particular, we found a beautiful 1/3-competitive randomized algorithm, which uses a binary tree to guide its matching decisions.
-
-    <figure>
-         <img src="non_crossing_matching_ours.png" class="center" style="width:30%" class="center">
-      <figcaption>Fig b: A figure illustrating a deterministic algorithm in our paper.
-      </figcaption>
-   </figure>
 </details>
 </i>
 
