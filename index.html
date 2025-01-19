@@ -38,33 +38,35 @@
             border-radius: 8px;
         }
 
-        .research-images-container { /* Container for multiple images */
+
+
+        .research-images-container {
             display: flex;
-            flex-wrap: wrap; /* Allows wrapping on smaller screens */
-            justify-content: center; /* Centers images horizontally */
-            gap: 20px; /* Space between images */
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0px;
         }
 
         .research-image {
-            width: fit-content;
+            width: fit-content; /*  max-width: 45%;   /*Or another suitable percentage */
             text-align: center;
+            /*  margin-bottom: 20px; /* Add some margin below each image */
         }
 
         .research-image img {
-            /*max-width: 100%; /* Important for scaling within container */
-            max-width: 80%;
+            max-width: 100%;
             height: auto;
             border-radius: 8px;
             display: block;
-            margin: 0 auto;
+            margin: 0 auto; 
         }
+
         .research-image figcaption {
             font-style: italic;
             font-size: smaller;
             text-align: center;
             margin-top: 5px;
         }
-        
 
         .tabs {
             margin-top: 20px;
@@ -108,11 +110,8 @@
                 margin: 20px auto;
                 flex: 0 0 auto;
             }
-        }
-
-        @media (max-width: 800px) {
-           .research-image {
-                width: 90%; /* set width of the container to 90% */
+            .research-image {
+                max-width: 90%;  /*Use full width on smaller screens */
             }
         }
 
@@ -232,7 +231,7 @@
                                     <img src="BP_illustration.png" alt="Your Photo">
                                     <figcaption>Fig a: A decision tree (left) and a branching program (right). Picture from wikipedia.</figcaption>
                                 </figure>
-                            </div>       
+                            </div>
                             This paper studied the minimum size of read-once branching programs from the perspective of proposing lower bound complexity measures, and demonstrated their strengths as well as limitations, such as on  the Tseitin formula (which is applicable in proof complexity), and on the Tree Evaluation Problem (which is studied for understanding a fundamental open problem in complexity: Logspace vs Polytime), etc.
                             <div class = "research-images-container">
                                 <figure class="research-image">
