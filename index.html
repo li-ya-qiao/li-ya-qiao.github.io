@@ -207,10 +207,101 @@
 
                 <div class="inner-tabs">
                     <div class="inner-tab-buttons">
-                        <button class="inner-tab-button active" onclick="openInnerTab('info')">Information</button>
-                        <button class="inner-tab-button" onclick="openInnerTab('ts')">Time & Space</button>
+                        <button class="inner-tab-button active" onclick="openInnerTab('ts')">Time & Space</button>
+                        <button class="inner-tab-button" onclick="openInnerTab('info')">Information</button>
                         <button class="inner-tab-button" onclick="openInnerTab('colors')">Graph Colors</button>
                         <button class="inner-tab-button" onclick="openInnerTab('math')">MATH</button>
+                    </div>
+
+                    <div id="ts" class="inner-tab-content" style="display:none;">
+                        <p>Time and space are fundamental computational resources analyzed within various models, including query complexity in decision trees, time-space tradeoffs in branching programs, and quantum computing models.</p>
+                        <p><b>I am currently investigating the challenge of establishing lower bounds for branching programs.</b></p>
+                        <ol>
+                        <li>
+                        Yaqiao Li, <a href="http://www.iro.umontreal.ca/~mckenzie/" target="_blank">Pierre McKenzie</a>, 
+                        Perspective on complexity measures targeting read-once branching programs,
+                        <i>Information and Computation (2024)</i>.
+                        <a href="https://arxiv.org/abs/2305.11276" target="_blank">arXiv:2305.11276</a>.
+                        </li>
+                        <i>
+                        <details>
+                            <summary>click for a Summary:</summary>
+                            Branching program (aka, binary decision diagram) is a more flexible counterpart of decision tree that represents/computes Boolean functions. It is: (i) a basic model for studying computational space, (ii) closely related to pseudorandomness, (iii) a fundamental data structure, (iv) useful to synthesize circuits and in formal verification, etc. 
+                            <div class = "research-images-container">
+                                <figure class="research-image">
+                                    <img src="BP_illustration.png" alt="Your Photo">
+                                    <figcaption>Fig a: A decision tree (left) and a branching program (right). Picture from wikipedia.</figcaption>
+                                </figure>
+                            </div>       
+                            This paper studied the minimum size of read-once branching programs from the perspective of proposing lower bound complexity measures, and demonstrated their strengths as well as limitations, such as on  the Tseitin formula (which is applicable in proof complexity), and on the Tree Evaluation Problem (which is studied for understanding a fundamental open problem in complexity: Logspace vs Polytime), etc.
+                            <div class = "research-images-container">
+                                <figure class="research-image">
+                                    <img src="BP_result.png" alt="Your Photo">
+                                    <figcaption>Fig b: A figure in our paper comparing different complexity measures.</figcaption>
+                                </figure>
+                            </div>      
+                        </details>
+                        </i>
+                        <br>
+
+                        <li>
+                        Shenggen Zheng,
+                        Yaqiao Li, 
+                        Minghua Pan, 
+                        Jozef Gruska,
+                        Lvzhou Li, 
+                        Lifting query complexity to time-space complexity for two-way finite automata,
+                        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0022000023000995" target="_blank">Journal of Computer and System Sciences (2024)</a>.
+                        </li>
+                        <i>
+                        <details>
+                            <summary>click for a Summary:</summary>
+                            Is quantum computing more powerful than classical computing? Recently, many quantum computers built showed superior computational advantage.
+                            <div class = "research-images-container">
+                                <figure class="research-image">
+                                    <img src="quantum_zcz.png" alt="Your Photo">
+                                    <figcaption>Fig a: Quantum computer Zuchongzhi, photo credit from Pan Jianwei's team, see 
+                                            <a href="https://arxiv.org/abs/2109.03494" target="_blank">their work</a> and a 
+                                            <a href="http://www.news.cn/english/2021-10/26/c_1310270070.htm" target="_blank">news report</a>.</figcaption>
+                                </figure>
+                            </div>   
+                            This paper, using the lifting technique in communication complexity, proved that in the two-way finite automata model, quantum computing is more time-space efficent than classical computing.
+                            <div class = "research-images-container">
+                                <figure class="research-image">
+                                    <img src="quantum_automata.png" alt="Your Photo">
+                                    <figcaption>Fig b: A snapshot of a proof in our paper.</figcaption>
+                                </figure>
+                            </div>     
+                        </details>
+                        </i>
+                        <br>
+
+                        <li>
+                        Yaqiao Li, Conflict complexity is lower bounded by block sensitivity,
+                        <i><a href="https://www.sciencedirect.com/science/article/pii/S0304397520307726" target="_blank">Theoretical Computer Science 856 (2021) 169–172</a></i>.
+                        <a href="https://arxiv.org/abs/1810.08873" target="_blank">arXiv:1810:08873</a>. 
+                        </li>
+                        <i>
+                        <details>
+                            <summary>click for a Summary:</summary>
+                            If you use a decision tree to compute a composition of two Boolean functions f and g, how does this relate to a decision tree computing f and a decision tree computing g? The measure of conflict complexity was proposed to study (a randomized version of) this problem. Block sensitivity is another complexity measure that tells how a function's value is affected by changing a block of its input.
+                            <div class = "research-images-container">
+                                <figure class="research-image">
+                                    <img src="Conflict_decisiontree.png" alt="Your Photo">
+                                    <figcaption>Fig a: A decision tree computing a Boolean function. Picture from wikipedia.</figcaption>
+                                </figure>
+                            </div>  
+                            This paper showed block sensitivity is no greater than conflict complexity, and posed an open problem concerning conflict complexity and certificate complexity, solution of which would have interesting consequences.
+                            <div class = "research-images-container">
+                                <figure class="research-image">
+                                    <img src="conflict_Q.png" alt="Your Photo">
+                                    <figcaption>Fig b: An open question proposed in this work.</figcaption>
+                                </figure>
+                            </div>  
+                        </details>
+                        </i>
+                        <br>
+                        </ol> 
                     </div>
 
                     <div id="info" class="inner-tab-content">
@@ -318,99 +409,7 @@
                         <br>
                         </ol> 
                     </div>
-
-                    <div id="ts" class="inner-tab-content" style="display:none;">
-                        <p>Time and space are fundamental computational resources analyzed within various models, including query complexity in decision trees, time-space tradeoffs in branching programs, and quantum computing models.</p>
-                        <p><b>I am currently investigating the challenge of establishing lower bounds for branching programs.</b></p>
-                        <ol>
-                        <li>
-                        Yaqiao Li, <a href="http://www.iro.umontreal.ca/~mckenzie/" target="_blank">Pierre McKenzie</a>, 
-                        Perspective on complexity measures targeting read-once branching programs,
-                        <i>Information and Computation (2024)</i>.
-                        <a href="https://arxiv.org/abs/2305.11276" target="_blank">arXiv:2305.11276</a>.
-                        </li>
-                        <i>
-                        <details>
-                            <summary>click for a Summary:</summary>
-                            Branching program (aka, binary decision diagram) is a more flexible counterpart of decision tree that represents/computes Boolean functions. It is: (i) a basic model for studying computational space, (ii) closely related to pseudorandomness, (iii) a fundamental data structure, (iv) useful to synthesize circuits and in formal verification, etc. 
-                            <div class = "research-images-container">
-                                <figure class="research-image">
-                                    <img src="BP_illustration.png" alt="Your Photo">
-                                    <figcaption>Fig a: A decision tree (left) and a branching program (right). Picture from wikipedia.</figcaption>
-                                </figure>
-                            </div>       
-                            This paper studied the minimum size of read-once branching programs from the perspective of proposing lower bound complexity measures, and demonstrated their strengths as well as limitations, such as on  the Tseitin formula (which is applicable in proof complexity), and on the Tree Evaluation Problem (which is studied for understanding a fundamental open problem in complexity: Logspace vs Polytime), etc.
-                            <div class = "research-images-container">
-                                <figure class="research-image">
-                                    <img src="BP_result.png" alt="Your Photo">
-                                    <figcaption>Fig b: A figure in our paper comparing different complexity measures.</figcaption>
-                                </figure>
-                            </div>      
-                        </details>
-                        </i>
-                        <br>
-
-                        <li>
-                        Shenggen Zheng,
-                        Yaqiao Li, 
-                        Minghua Pan, 
-                        Jozef Gruska,
-                        Lvzhou Li, 
-                        Lifting query complexity to time-space complexity for two-way finite automata,
-                        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0022000023000995" target="_blank">Journal of Computer and System Sciences (2024)</a>.
-                        </li>
-                        <i>
-                        <details>
-                            <summary>click for a Summary:</summary>
-                            Is quantum computing more powerful than classical computing? Recently, many quantum computers built showed superior computational advantage.
-                            <div class = "research-images-container">
-                                <figure class="research-image">
-                                    <img src="quantum_zcz.png" alt="Your Photo">
-                                    <figcaption>Fig a: Quantum computer Zuchongzhi, photo credit from Pan Jianwei's team, see 
-                                            <a href="https://arxiv.org/abs/2109.03494" target="_blank">their work</a> and a 
-                                            <a href="http://www.news.cn/english/2021-10/26/c_1310270070.htm" target="_blank">news report</a>.</figcaption>
-                                </figure>
-                            </div>   
-                            This paper, using the lifting technique in communication complexity, proved that in the two-way finite automata model, quantum computing is more time-space efficent than classical computing.
-                            <div class = "research-images-container">
-                                <figure class="research-image">
-                                    <img src="quantum_automata.png" alt="Your Photo">
-                                    <figcaption>Fig b: A snapshot of a proof in our paper.</figcaption>
-                                </figure>
-                            </div>     
-                        </details>
-                        </i>
-                        <br>
-
-                        <li>
-                        Yaqiao Li, Conflict complexity is lower bounded by block sensitivity,
-                        <i><a href="https://www.sciencedirect.com/science/article/pii/S0304397520307726" target="_blank">Theoretical Computer Science 856 (2021) 169–172</a></i>.
-                        <a href="https://arxiv.org/abs/1810.08873" target="_blank">arXiv:1810:08873</a>. 
-                        </li>
-                        <i>
-                        <details>
-                            <summary>click for a Summary:</summary>
-                            If you use a decision tree to compute a composition of two Boolean functions f and g, how does this relate to a decision tree computing f and a decision tree computing g? The measure of conflict complexity was proposed to study (a randomized version of) this problem. Block sensitivity is another complexity measure that tells how a function's value is affected by changing a block of its input.
-                            <div class = "research-images-container">
-                                <figure class="research-image">
-                                    <img src="Conflict_decisiontree.png" alt="Your Photo">
-                                    <figcaption>Fig a: A decision tree computing a Boolean function. Picture from wikipedia.</figcaption>
-                                </figure>
-                            </div>  
-                            This paper showed block sensitivity is no greater than conflict complexity, and posed an open problem concerning conflict complexity and certificate complexity, solution of which would have interesting consequences.
-                            <div class = "research-images-container">
-                                <figure class="research-image">
-                                    <img src="conflict_Q.png" alt="Your Photo">
-                                    <figcaption>Fig b: An open question proposed in this work.</figcaption>
-                                </figure>
-                            </div>  
-                        </details>
-                        </i>
-                        <br>
-                        </ol> 
-                    </div>
-
-
+                    
                     <div id="colors" class="inner-tab-content" style="display:none;">
                         <p>Graph coloring is a fundamental mathematical topic with broad applications in computational resource allocation. My research investigates the lower and upper bounds of online graph coloring, and its connections to other online problems such as bin packing.</p>
                         <p><b>I'm currently exploring the intricate nature of online coloring 3-colorable graphs. </b></p>
