@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaqiao Li</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+
+        .wrapper {
+            width: 90%; /* Changed to 90% */
+            max-width: 1400px; /* Optional: Adjust max-width if needed */
+            margin: 0 auto;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .profile-info {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .profile-image {
+            flex: 0 0 300px;
+            margin-left: 20px;
+            text-align: center;
+        }
+
+        .profile-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .research-images-container { /* Container for multiple images */
+            display: flex;
+            flex-wrap: wrap; /* Allows wrapping on smaller screens */
+            justify-content: center; /* Centers images horizontally */
+            gap: 20px; /* Space between images */
+        }
+
+        .research-image {
+            width: fit-content;
+            text-align: center;
+        }
+
+        .research-image img {
+            /*max-width: 100%; /* Important for scaling within container */
+            max-width: 80%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto;
+        }
+        .research-image figcaption {
+            font-style: italic;
+            font-size: smaller;
+            text-align: center;
+            margin-top: 5px;
+        }
+        
+
+        .tabs {
+            margin-top: 20px;
+        }
+
+        .tab-buttons {
+            display: flex;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .tab-button {
+            padding: 10px 15px;
+            cursor: pointer;
+            border: none;
+            background-color: #f0f0f0;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            margin-right: 2px;
+        }
+
+        .tab-button.active {
+            background-color: #e0f2f7; /* A very light blue */
+            border-bottom: 1px solid #e0f2f7;
+            color: #0d47a1; /* Darker blue text for contrast */
+        }
+
+        .tab-content {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+        @media (max-width: 800px) {
+            .wrapper {
+                width: 95%;
+            }
+            .container {
+                flex-direction: column;
+            }
+            .profile-image {
+                margin: 20px auto;
+                flex: 0 0 auto;
+            }
+        }
+
+        @media (max-width: 800px) {
+           .research-image {
+                width: 90%; /* set width of the container to 90% */
+            }
+        }
+
+        .news {
+            color: red;
+            /*font-weight: bold;  Optional: Make it bold */
+        }
+        .inner-tabs {
+            margin-top: 20px;
+        }
+
+        .inner-tab-buttons {
+            display: flex;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .inner-tab-button {
+            padding: 10px 15px;
+            cursor: pointer;
+            border: none;
+            background-color: #f0f0f0;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            margin-right: 2px;
+        }
+
+        .inner-tab-button.active {
+            background-color: #e0f2f7; /* A very light blue */
+            border-bottom: 1px solid #e0f2f7;
+            color: #0d47a1; /* Darker blue text for contrast */
+        }
+
+        .inner-tab-content {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="wrapper">
+        <div class="container">
+            <div class="profile-info">
+                <h1>Yaqiao Li 李雅樵</h1>
+                <p>I am an Assistant Professor in <a href="https://suat-sz.edu.cn/en/" target="_blank">SUAT</a> (<a href="https://www.suat-sz.edu.cn/" target="_blank">深圳理工大学</a>) in Shenzhen, China. <br>
+                I got my Master in pure math from Peking Univeristy, PhD in computer science from McGill Univeristy, Postdoc in University of Montreal and Concordia Univeristy.<br>
+                I was fortunately mentored by <a href="http://www.math.pku.edu.cn/teachers/anjp/" target="_blank">Jinpeng An</a>, 
+                    <a href="http://cs.mcgill.ca/~hatami/" target="_blank">Hamed Hatami</a>, 
+                    <a href="http://www.iro.umontreal.ca/~mckenzie/" target="_blank">Pierre McKenzie</a>, 
+                    <a href="http://pankratov.ca/" target="_blank">Denis Pankratov</a> and 
+                    <a href="https://users.encs.concordia.ca/~lata/" target="_blank">Lata Narayanan</a>.
+                 </p> 
+
+                <p><span class="news">Postdocs, PhD/Master, research visitors positions are available. Send your CV and RS to apply.  </span></p>
+
+                <p>Email: liyaqiao@suat-sz.edu.cn </p>
+
+                <p><span class="news">News in Research(<a href="https://scholar.google.com/citations?user=QgGUxKgAAAAJ&hl=en" target="_blank">Google Scholar</a>):</span></p>
+                <ul>
+                    <li> 2025/01: Our paper "Diversity-seeking swap games in networks" is accepted by AAMAS 2025. <i>Topic: game theory.</i> </li>
+                    <li> 2025/01: Our paper "Renting servers for multi-parameter jobs in the cloud" won ICDCN 2025 <b>best paper award!</b> <i>Topic: online computation.</i> </li>
+                    <li> 2024/10: Our paper "Perspective on complexity measures targeting read-once branching programs" is accepted by Information and Computation. <i>Topic: computational complexity.</i> </li>
+                    <li> 2024/04: Our paper "On the Online Weighted Non-Crossing Matching Problem" is accepted by SWAT 2024. <i>Topic: online computation.</i> </li>
+                </ul>
+            </div>
+            <div class="profile-image">
+                <img src="mypic.jpg" alt="Your Photo">
+            </div>
+        </div>
+
+        <div class="tabs">
+            <div class="tab-buttons">
+                <button class="tab-button active" onclick="openTab('research')">Research Summary</button>
+                <button class="tab-button" onclick="openTab('publications')">Publications</button>
+                <button class="tab-button" onclick="openTab('teaching')">Teaching</button>
+                <button class="tab-button" onclick="openTab('CV')">CV</button>
+            </div>
+            <div id="research" class="tab-content">
+                <!---- <h2>Research Summary</h2>  ---->
+                <div class="container">
+                    <div class="profile-info">
+                        <p>My research focuses on <em>understanding resource-constrained computing</em> and <em>developing the mathematics</em> that underpin it.  Interestingly, seemingly disparate resource constraints share deep connections, see the figure. Explore more about specific resource types below.</p>
+                        <p><b>I'm currently investigating branching programs and online graph coloring. <br>
+                        For the related math, I'm exploring a new version of Kakeya sets.</b></p>
+                    </div>
+                    <div class="profile-image">
+                        <img src="my_research_triangle_En.png" alt="Your Photo">
+                    </div>
+                </div>
+
+                <div class="inner-tabs">
+                    <div class="inner-tab-buttons">
+                        <button class="inner-tab-button active" onclick="openInnerTab('info')">Information</button>
+                        <button class="inner-tab-button" onclick="openInnerTab('ts')">Time & Space</button>
+                        <button class="inner-tab-button" onclick="openInnerTab('colors')">Graph Colors</button>
+                        <button class="inner-tab-button" onclick="openInnerTab('math')">MATH</button>
+                    </div>
+
+                    <div id="info" class="inner-tab-content">
+                        <p>Information plays a central role in computation. I studied the information requirements for fundamental distributed computing tasks, such as determining set disjointness between two parties.</p>
+                        <ol>
+                        <li>
+                        Yaqiao Li, 
+                        Trading information complexity for error II: the case of a large error and external information complexity,  
+                        <a href="https://doi.org/10.1016/j.ic.2022.104952" target="_blank">Information and Computation (2022)</a>.
+                        <a href="https://arxiv.org/abs/1809.10219" target="_blank">arXiv:1809.10219</a>.
+                        </li>
+                        <i>
+                        <details>
+                            <summary>click for a Summary:</summary>
+                            Information complexity, incorporating Shannon's information theory into communication models, is a continuous version of communication complexity. Initially, it was used to help study communication complexity, and later found many other applications such as in optimization and in circuit complexity, etc.<br>
+
+                            <div class = "research-images-container">
+                                <figure class="research-image">
+                                    <img src="IC_people.jpg" alt="Your Photo">
+                                    <figcaption>Fig a: Shannon, Yao, Braverman. Photo from wikipedia and amturing.acm.org.</figcaption>
+                                </figure>
+                            </div>
+                            This paper, as the 2nd part, completed the basic theory of the dependency of information complexity on the error allowed in computation. This in particular led to an an accurate formula of error-allowed information complexity of XOR function for a special distribution.
+                            <div class = "research-images-container">
+                                <figure class="research-image">
+                                    <img src="IC_error2_1.png" alt="Your Photo">
+                                    <figcaption>Fig b: An equality for information complexity of XOR function.</figcaption>
+                                </figure>
+                                <figure class="research-image">
+                                    <img src="IC_error2_2.png" alt="Your Photo">
+                                    <figcaption>Fig c: A snapshot of analysis of information complexity of AND function.</figcaption>
+                                </figure>
+                            </div>
+                        </details>
+                        </i>
+                        <br>
+
+                        <li>
+                        <a href="http://www.cs.technion.ac.il/people/yuvalfi/" target="_blank">Yuval Filmus</a>, 
+                        <a href="http://cs.mcgill.ca/~hatami/" target="_blank">Hamed Hatami</a>, 
+                        Yaqiao Li,
+                        Suzin You,
+                        Information complexity of the AND function in the two-party and multiparty settings, 
+                        <i>COCOON 2017, <a href="https://doi.org/10.1007/s00453-018-0484-8" target="_blank">Algorithmica vol 81, 4200–4237(2019)</a></i>. 
+                        <a href="https://arxiv.org/abs/1703.07833" target="_blank">arXiv:1703.07833</a>.
+                        Here is the <a href="./files/MultiAnd.nb">Mathematica code</a> used in this paper. 
+                        </li>
+                        <i>
+                        <details>
+                            <summary>click for a Summary:</summary>
+                            Information complexity, incorporating Shannon's information theory into communication models, is a continuous version of communication complexity. Initially, it was used to help study communication complexity, and later found many other applications such as in optimization and in circuit complexity, etc.
+                            <div class = "research-images-container">
+                                <figure class="research-image">
+                                    <img src="IC_people.jpg" alt="Your Photo">
+                                    <figcaption>Fig a: Shannon, Yao, Braverman. Photo from wikipedia and amturing.acm.org.</figcaption>
+                                </figure>
+                            </div>
+                            This paper extended the optimal procol for two-party AND function in Braverman et. al. to multi-party, in doing so we had to invent various reductions and do meticulous calculation and computation.
+                            <div class = "research-images-container">
+                                <figure class="research-image">
+                                    <img src="Info_multiparty_1.png" alt="Your Photo">
+                                    <figcaption>Fig b: The (information cost) optimal  protocol for computing k-party AND.</figcaption>
+                                </figure>
+                                <figure class="research-image">
+                                    <img src="Info_multiparty_2.png" alt="Your Photo">
+                                    <figcaption>Fig c: A condition we need to verify to verify to certify optimality of the protocol.</figcaption>
+                                </figure>
+                            </div>
+                        </details>
+                        </i>
+                        <br>
+
+                        <li>
+                        <a href="https://yuvaldagan.wordpress.com/" target="_blank">Yuval Dagan</a>, 
+                        <a href="http://www.cs.technion.ac.il/people/yuvalfi/" target="_blank">Yuval Filmus</a>, 
+                        <a href="http://cs.mcgill.ca/~hatami/" target="_blank">Hamed Hatami</a>,
+                        Yaqiao Li, 
+                        Trading information complexity for error,  
+                        <i>CCC 2017, <a href="https://theoryofcomputing.org/articles/v014a006/" target="_blank">Theory of Computing Vol 14 (2018) Article 6 pp. 1-73</a></i>. 
+                        <a href="https://arxiv.org/abs/1611.06650" target="_blank">arXiv:1611.06650</a>.
+                        </li>
+                        <i>
+                        <details>
+                            <summary>click for a Summary:</summary>
+                            Information complexity, incorporating Shannon's information theory into communication models, is a continuous version of communication complexity. Initially, it was used to help study communication complexity, and later found many other applications such as in optimization and in circuit complexity, etc.
+                            <div class = "research-images-container">
+                                <figure class="research-image">
+                                    <img src="IC_people.jpg" alt="Your Photo">
+                                    <figcaption>Fig a: Shannon, Yao, Braverman. Photo from wikipedia and amturing.acm.org.</figcaption>
+                                </figure>
+                            </div>
+                            This paper, as the 1st part, initiated the basic theory of the dependency of information complexity on the error allowed in computation. This led to a more accurate formula of the randomized communication complexity of the important disjointness function, and a solution of an open problem of Braverman.
+                            <div class = "research-images-container">
+                                <figure class="research-image">
+                                    <img src="Info_error1_1.png" alt="Your Photo">
+                                    <figcaption>Fig b: The formula for the randomized communication complexity of the disjointness function.</figcaption>
+                                </figure>
+                                <figure class="research-image">
+                                    <img src="Info_error1_2.png" alt="Your Photo">
+                                    <figcaption>Fig c: A communication protocol with economic information cost for the disjointness function.</figcaption>
+                                </figure>
+                            </div>
+                        </details>
+                        </i>
+                        <br>
+                        </ol> 
+                    </div>
+
+                    <div id="ts" class="inner-tab-content" style="display:none;">
+                        <p>Time and space are fundamental computational resources analyzed within various models, including query complexity in decision trees, time-space tradeoffs in branching programs, and quantum computing models.</p>
+                        <p><b>I am currently investigating the challenge of establishing lower bounds for branching programs.</b></p>
+                        <ol>
+                        <li>
+                        Yaqiao Li, <a href="http://www.iro.umontreal.ca/~mckenzie/" target="_blank">Pierre McKenzie</a>, 
+                        Perspective on complexity measures targeting read-once branching programs,
+                        <i>Information and Computation (2024)</i>.
+                        <a href="https://arxiv.org/abs/2305.11276" target="_blank">arXiv:2305.11276</a>.
+                        </li>
+                        <i>
+                        <details>
+                            <summary>click for a Summary:</summary>
+                            Branching program (aka, binary decision diagram) is a more flexible counterpart of decision tree that represents/computes Boolean functions. It is: (i) a basic model for studying computational space, (ii) closely related to pseudorandomness, (iii) a fundamental data structure, (iv) useful to synthesize circuits and in formal verification, etc. 
+                            <div class = "research-images-container">
+                                <figure class="research-image">
+                                    <img src="BP_illustration.png" alt="Your Photo">
+                                    <figcaption>Fig a: A decision tree (left) and a branching program (right). Picture from wikipedia.</figcaption>
+                                </figure>
+                            </div>       
+                            This paper studied the minimum size of read-once branching programs from the perspective of proposing lower bound complexity measures, and demonstrated their strengths as well as limitations, such as on  the Tseitin formula (which is applicable in proof complexity), and on the Tree Evaluation Problem (which is studied for understanding a fundamental open problem in complexity: Logspace vs Polytime), etc.
+                            <div class = "research-images-container">
+                                <figure class="research-image">
+                                    <img src="BP_result.png" alt="Your Photo">
+                                    <figcaption>Fig b: A figure in our paper comparing different complexity measures.</figcaption>
+                                </figure>
+                            </div>      
+                        </details>
+                        </i>
+                        <br>
+
+                        <li>
+                        Shenggen Zheng,
+                        Yaqiao Li, 
+                        Minghua Pan, 
+                        Jozef Gruska,
+                        Lvzhou Li, 
+                        Lifting query complexity to time-space complexity for two-way finite automata,
+                        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0022000023000995" target="_blank">Journal of Computer and System Sciences (2024)</a>.
+                        </li>
+                        <i>
+                        <details>
+                            <summary>click for a Summary:</summary>
+                            Is quantum computing more powerful than classical computing? Recently, many quantum computers built showed superior computational advantage.
+                            <div class = "research-images-container">
+                                <figure class="research-image">
+                                    <img src="quantum_zcz.png" alt="Your Photo">
+                                    <figcaption>Fig a: Quantum computer Zuchongzhi, photo credit from Pan Jianwei's team, see 
+                                            <a href="https://arxiv.org/abs/2109.03494" target="_blank">their work</a> and a 
+                                            <a href="http://www.news.cn/english/2021-10/26/c_1310270070.htm" target="_blank">news report</a>.</figcaption>
+                                </figure>
+                            </div>   
+                            This paper, using the lifting technique in communication complexity, proved that in the two-way finite automata model, quantum computing is more time-space efficent than classical computing.
+                            <div class = "research-images-container">
+                                <figure class="research-image">
+                                    <img src="quantum_automata.png" alt="Your Photo">
+                                    <figcaption>Fig b: A snapshot of a proof in our paper.</figcaption>
+                                </figure>
+                            </div>     
+                        </details>
+                        </i>
+                        <br>
+
+                        <li>
+                        Yaqiao Li, Conflict complexity is lower bounded by block sensitivity,
+                        <i><a href="https://www.sciencedirect.com/science/article/pii/S0304397520307726" target="_blank">Theoretical Computer Science 856 (2021) 169–172</a></i>.
+                        <a href="https://arxiv.org/abs/1810.08873" target="_blank">arXiv:1810:08873</a>. 
+                        </li>
+                        <i>
+                        <details>
+                            <summary>click for a Summary:</summary>
+                            If you use a decision tree to compute a composition of two Boolean functions f and g, how does this relate to a decision tree computing f and a decision tree computing g? The measure of conflict complexity was proposed to study (a randomized version of) this problem. Block sensitivity is another complexity measure that tells how a function's value is affected by changing a block of its input.
+                            <div class = "research-images-container">
+                                <figure class="research-image">
+                                    <img src="Conflict_decisiontree.png" alt="Your Photo">
+                                    <figcaption>Fig a: A decision tree computing a Boolean function. Picture from wikipedia.</figcaption>
+                                </figure>
+                            </div>  
+                            This paper showed block sensitivity is no greater than conflict complexity, and posed an open problem concerning conflict complexity and certificate complexity, solution of which would have interesting consequences.
+                            <div class = "research-images-container">
+                                <figure class="research-image">
+                                    <img src="conflict_Q.png" alt="Your Photo">
+                                    <figcaption>Fig b: An open question proposed in this work.</figcaption>
+                                </figure>
+                            </div>  
+                        </details>
+                        </i>
+                        <br>
+                        </ol> 
+                    </div>
+
+
+                    <div id="colors" class="inner-tab-content" style="display:none;">
+                        <p>Graph coloring is a fundamental mathematical topic with broad applications in computational resource allocation. My research investigates the lower and upper bounds of online graph coloring, and its connections to other online problems such as bin packing.</p>
+                        <p><b>I'm currently exploring the intricate nature of online coloring 3-colorable graphs. </b></p>
+                        <ol>
+                            <li>
+                            Yaqiao Li, 
+                            <a href="https://users.encs.concordia.ca/~denisp/" target="_blank">Denis Pankratov</a>, Online Vector Bin Packing and Hypergraph Coloring Illuminated: Simpler Proofs and New Connections,
+                            <i>LAGOS 2023</i>,
+                            <a href="https://arxiv.org/abs/2306.11241" target="_blank">arXiv:2306.11241</a>.
+                            </li>
+                            <i>
+                            <details>
+                                <summary>click for a Summary:</summary>
+                                Bin packing is a classical NP-complete optimizaiton problem that is also of practical importance such as in loading cargo for shipping, creating file backups in media, etc.
+                                <div class = "research-images-container">
+                                    <figure class="research-image">
+                                        <img src="bin_packing_example.png" alt="Your Photo">
+                                        <figcaption>Fig a: Illustration of 3-dimensional bin packing. Figure from the paper `Hybrid approach for solving real-world bin packing problem instances using quantum annealers' by Romero et. al.</figcaption>
+                                    </figure>
+                                    <figure class="research-image">
+                                        <img src="OHC_VBP.png" alt="Your Photo">
+                                        <figcaption>Fig b: A picture of high dimensional bin packing in AI's mind (AI generated image, credit to tongyi[通义]).</figcaption>
+                                    </figure>        
+                                </div> 
+                                This paper introduced the online incidence matrix associated with the online hypergraph, which naturally led to a simple reduction from online hypergraph coloring to online vector bin packing, thus simplified a previous breakthrough by Azar et. al.. This paper also showed a 'diverse' multi-family has an interesting intersecting property, thus resolved a conjecture on online hypergraph coloring by Nagy-György and Imreh.
+                                <div class = "research-images-container">
+                                    <figure class="research-image">
+                                        <img src="OHC_1.png" alt="Your Photo">
+                                        <figcaption>Fig c: Illustration of the online incidence matrix that we defined in this work.</figcaption>
+                                    </figure>
+                                    <figure class="research-image">
+                                        <img src="OHC_2.png" alt="Your Photo">
+                                        <figcaption>Fig d: Illustration of proving a conjecture on online hypergraph coloring by Nagy-György and Imreh.</figcaption>
+                                    </figure>        
+                                </div> 
+                            </details>
+                            </i>
+                            <br>
+
+                            <li>
+                            Yaqiao Li, <a href="https://www.cs.mcgill.ca/~vnaray4/" target="_blank">Vishnu V. Narayan</a>, 
+                            <a href="https://users.encs.concordia.ca/~denisp/" target="_blank">Denis Pankratov</a>, Online coloring and a new type of adversary for online graph problems,
+                            <i>WAOA 2020</i>,
+                            <a href="https://doi.org/10.1007/s00453-021-00920-w" target="_blank">Algorithmica (2022)</a>.
+                            <a href="https://arxiv.org/abs/2005.10852" target="_blank">arXiv:2005.10852</a>.
+                            </li>
+                            <i>
+                            <details>
+                                <summary>click for a Summary:</summary>
+                                Many large networks are constructed online, such as social networks and internet. Such graphs can be modelled by online graph, where at each time step a vertex appears together with its set of edges to some of existing vertices. A fundamental question is: suppose an online graph has completed its construction and turns out to be k-colorable, then, how many colors do we need if we have to irrevocably color every vertex as soon as it appears? A line of work including Lovász et. al. and  Gutowski et. al. gives satisfactory understanding for bipartite graphs. For  3-colorable graphs nontrivial progress has also been made, but far from satisfactory. 
+                                <div class = "research-images-container">
+                                    <figure class="research-image">
+                                        <img src="OC_social_networks.png" alt="Your Photo">
+                                        <figcaption>Fig a: Social networks could facilitate and enrich our lives. Picture from baidu.</figcaption>
+                                    </figure>
+                                    <figure class="research-image">
+                                        <img src="OC_AI_SN.png" alt="Your Photo">
+                                        <figcaption>Fig b: Social networks connect people in universe (AI generated image, credit to tongyi[通义]).</figcaption>
+                                    </figure>        
+                                </div>
+                                Motivated to explore the strength and weakness of existing techniques, this paper introduced the bounded components model. One one hand, we discovered that the efficiency for coloring online bipartite graph is accurately determined by the number of connected components during the online construction. In comparison, we showed that bounded components is not a serious constraint for 3-colorable graphs.
+                                <div class = "research-images-container">
+                                    <figure class="research-image">
+                                        <img src="OC_kappa_1.png" alt="Your Photo">
+                                        <figcaption>Fig c: A snapshot of the analysis for online coloring bipartite graphs.</figcaption>
+                                    </figure>
+                                    <figure class="research-image">
+                                        <img src="OC_kappa_2.png" alt="Your Photo">
+                                        <figcaption>Fig d: Illustration of showing bounded components does not seem to be a serious constraint for 3-colorable graphs.</figcaption>
+                                    </figure>        
+                                </div>
+                            </details>
+                            </i>
+                            <br>
+                        </ol>
+                    </div>
+
+
+                    <div id="math" class="inner-tab-content" style="display:none;">
+                        <p>Math is at the core of theoretical computer science study. </p>
+                        <p><b>I am currently investigating a new version of Kakeya sets to analyze problems in branching programs.</b></p>
+                        <ol>
+                        <li>
+                        Yaqiao Li, 
+                        Ali Mohammad Lavasani, 
+                        Mehran Shakerinava, 
+                        Newman's theorem via Carathéodory,
+                        <a href="https://arxiv.org/pdf/2406.08500" target="_blank">arXiv:2406.08500</a>.
+                        </li>
+                        <i>
+                        <details>
+                            <summary>click for a Summary:</summary>
+                            Randomness is useful, sometimes necessary, e.g., you do not want to play a simple deterministic strategy in rock paper scissors. Randomness could help save communication cost as well. Now, if you can share randomness with your communicating partner, versus that you each have private randomness, is there a difference? Newman says they do differ, but not much.
+                            <div class = "research-images-container">
+                                <figure class="research-image">
+                                    <img src="Randomness_RPS1.png" alt="Your Photo">
+                                    <figcaption>Fig a: Rock paper scissors: a worldwide popular game orignated from China. Second picture from wikipedia.</figcaption>
+                                </figure>
+                                <figure class="research-image">
+                                    <img src="Randomness_RPS.gif" alt="Your Photo">
+                                    <figcaption>Fig b: Friends play rock paper scissors, with fire.</figcaption>
+                                </figure>        
+                            </div>
+                            This paper gave a new short proof of Newman's theorem in communication complexity by applying the classical and the approximate Carathéodory's theorems in convex geometry.
+                            <div class = "research-images-container">
+                                <figure class="research-image">
+                                    <img src="Newman_Cara.png" alt="Your Photo">
+                                    <figcaption>Fig c: About 80% of the proof.</figcaption>
+                                </figure>
+                            </div>
+                        </details>
+                        </i>
+                        <br>
+
+                        <li>
+                        <a href="https://www.cs.mcgill.ca/~lhamba/" target="_blank">Lianna Hambardzumyan</a>, 
+                        Yaqiao Li,
+                        Chang's lemma via Pinsker's inequality, 
+                        <i><a href="https://www.sciencedirect.com/science/article/pii/S0012365X19301347" target="_blank">Discrete Mathematics, vol 343, iss 1 (2020)</a></i>.
+                        <a href="https://arxiv.org/abs/2005.10830" target="_blank">arXiv:2005.10830</a>
+                        </li>
+                        <i>
+                        <details>
+                            <summary>click for a Summary:</summary>
+                            This paper, extending the idea in Impagliazzo et.al., gave a short information theoretic proof for Chang's lemma via Pinsker's inequality.
+                            <div class = "research-images-container">
+                                <figure class="research-image">
+                                    <img src="Chang_Pinsker.png" alt="Your Photo">
+                                    <figcaption>Fig a: About 80% of the proof.</figcaption>
+                                </figure>
+                            </div>
+                        </details>
+                        </i>
+                        <br>
+
+                        <li>
+                        <a href="http://cs.mcgill.ca/~hatami/" target="_blank">Hamed Hatami</a>, 
+                        <a href="https://pooyahatami.org/" target="_blank">Pooya Hatami</a>,
+                        Yaqiao Li,  
+                        A characterization of functions with vanishing averages over products of disjoint sets,  
+                        <i><a href="https://www.sciencedirect.com/science/article/pii/S0195669816000317" target="_blank">European J. Combin., vol 56 (2016) 81–93</a></i>.
+                        <a href="http://arxiv.org/abs/1411.2314" target="_blank">arXiv:1411.2314</a>.
+                        </li>
+                        <i>
+                        <details>
+                            <summary>click for a Summary:</summary>
+                            Random graph is an important model in mathematics, physics, computer science, and in studying epidemics such as COVID-19. The Erdős–Rényi random graph has its edges generated independently  with some probability p. A graph is quasi-random if it has similar statistics of subgraph-counts with the Erdős–Rényi random graph, e.g., the number of triangles should be close to n^3 p^3.
+                            <div class = "research-images-container">
+                                <figure class="research-image">
+                                    <img src="random_networks.png" alt="Your Photo">
+                                    <figcaption>Fig a: Various random networks, picture from 'Random Networks and their Applications to the COVID-19 Pandemic' by Joseph Sheely.</figcaption>
+                                </figure>
+                            </div>
+
+
+                            Although graphs seem combinatorial in nature, this paper used an analytic tool called Walsh expansion to understand the structure of functions satisfying certain integration property, the structure discovered led to resolving some of the conjectures on quasi-random graphs by Janson and Sós. 
+                            <!---- Pierre Deligne (Fields Medalist) wrote a letter commenting our structure theorem.--->
+                            <div class = "research-images-container">
+                                <figure class="research-image">
+                                    <img src="Walsh_1.png" alt="Your Photo">
+                                    <figcaption>Fig b: The structure theorem.</figcaption>
+                                </figure>
+                                <figure class="research-image">
+                                    <img src="Walsh_2.png" alt="Your Photo">
+                                    <figcaption>Fig c: A snapshot of the proof.</figcaption>
+                                </figure>        
+                            </div>
+                        </details>
+                        </i>
+                        <br>
+
+                        <li>
+                        Yaqiao Li, 
+                        The winning property of mixed badly approximable numbers,  
+                        <i>Moscow J. Comb. Number Theory, vol 3 issue 1 (2013)</i>. 
+                        <a href="http://arxiv.org/abs/1212.6584" target="_blank">arXiv:1212.6584</a>.
+                        </li>
+                        <i>
+                        <details>
+                            <summary>click for a Summary:</summary>
+                            This paper improved the winning property of mixed badly approximable numbers to the best possible, thus answered in affirmative a question in a survey of N. Moshchevitin.
+                            <div class = "research-images-container">
+                                <figure class="research-image">
+                                    <img src="Bad_1.png" alt="Your Photo">
+                                    <figcaption>Fig a: Badly approximable numbers.</figcaption>
+                                </figure>        
+                            </div>    
+                        </details>
+                        </i>
+                        <br>
+                        </ol>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div id="publications" class="tab-content" style="display:none;">
+            <p>A full list of my publications, organized by main topic:</p>
+            <p>
+            <ul> 
+
+            <li><b>Computational Complexity</b></li>
+            <ol>
+                <li>
+                Yaqiao Li, <a href="http://www.iro.umontreal.ca/~mckenzie/" target="_blank">Pierre McKenzie</a>, 
+                Perspective on complexity measures targeting read-once branching programs,
+                <i>Information and Computation (2024)</i>.
+                <a href="https://arxiv.org/abs/2305.11276" target="_blank">arXiv:2305.11276</a>.
+                </li>
+                <i>
+                <details>
+                    <summary>click for a Summary:</summary>
+                    Branching program (aka, binary decision diagram) is a more flexible counterpart of decision tree that represents/computes Boolean functions. It is: (i) a basic model for studying computational space, (ii) closely related to pseudorandomness, (iii) a fundamental data structure, (iv) useful to synthesize circuits and in formal verification, etc. 
+                    <div class = "research-images-container">
+                        <figure class="research-image">
+                            <img src="BP_illustration.png" alt="Your Photo">
+                            <figcaption>Fig a: A decision tree (left) and a branching program (right). Picture from wikipedia.</figcaption>
+                        </figure>
+                    </div>       
+                    This paper studied the minimum size of read-once branching programs from the perspective of proposing lower bound complexity measures, and demonstrated their strengths as well as limitations, such as on  the Tseitin formula (which is applicable in proof complexity), and on the Tree Evaluation Problem (which is studied for understanding a fundamental open problem in complexity: Logspace vs Polytime), etc.
+                    <div class = "research-images-container">
+                        <figure class="research-image">
+                            <img src="BP_result.png" alt="Your Photo">
+                            <figcaption>Fig b: A figure in our paper comparing different complexity measures.</figcaption>
+                        </figure>
+                    </div>      
+                </details>
+                </i>
+                <br>
+
+                <li>
+                Shenggen Zheng,
+                Yaqiao Li, 
+                Minghua Pan, 
+                Jozef Gruska,
+                Lvzhou Li, 
+                Lifting query complexity to time-space complexity for two-way finite automata,
+                <a href="https://www.sciencedirect.com/science/article/abs/pii/S0022000023000995" target="_blank">Journal of Computer and System Sciences (2024)</a>.
+                </li>
+                <i>
+                <details>
+                    <summary>click for a Summary:</summary>
+                    Is quantum computing more powerful than classical computing? Recently, many quantum computers built showed superior computational advantage.
+                    <div class = "research-images-container">
+                        <figure class="research-image">
+                            <img src="quantum_zcz.png" alt="Your Photo">
+                            <figcaption>Fig a: Quantum computer Zuchongzhi, photo credit from Pan Jianwei's team, see 
+                                    <a href="https://arxiv.org/abs/2109.03494" target="_blank">their work</a> and a 
+                                    <a href="http://www.news.cn/english/2021-10/26/c_1310270070.htm" target="_blank">news report</a>.</figcaption>
+                        </figure>
+                    </div>   
+                    This paper, using the lifting technique in communication complexity, proved that in the two-way finite automata model, quantum computing is more time-space efficent than classical computing.
+                    <div class = "research-images-container">
+                        <figure class="research-image">
+                            <img src="quantum_automata.png" alt="Your Photo">
+                            <figcaption>Fig b: A snapshot of a proof in our paper.</figcaption>
+                        </figure>
+                    </div>     
+                </details>
+                </i>
+                <br>
+
+                <li>
+                Yaqiao Li, 
+                Trading information complexity for error II: the case of a large error and external information complexity,  
+                <a href="https://doi.org/10.1016/j.ic.2022.104952" target="_blank">Information and Computation (2022)</a>.
+                <a href="https://arxiv.org/abs/1809.10219" target="_blank">arXiv:1809.10219</a>.
+                </li>
+                <i>
+                <details>
+                    <summary>click for a Summary:</summary>
+                    Information complexity, incorporating Shannon's information theory into communication models, is a continuous version of communication complexity. Initially, it was used to help study communication complexity, and later found many other applications such as in optimization and in circuit complexity, etc.<br>
+
+                    <div class = "research-images-container">
+                        <figure class="research-image">
+                            <img src="IC_people.jpg" alt="Your Photo">
+                            <figcaption>Fig a: Shannon, Yao, Braverman. Photo from wikipedia and amturing.acm.org.</figcaption>
+                        </figure>
+                    </div>
+                    This paper, as the 2nd part, completed the basic theory of the dependency of information complexity on the error allowed in computation. This in particular led to an an accurate formula of error-allowed information complexity of XOR function for a special distribution.
+                    <div class = "research-images-container">
+                        <figure class="research-image">
+                            <img src="IC_error2_1.png" alt="Your Photo">
+                            <figcaption>Fig b: An equality for information complexity of XOR function.</figcaption>
+                        </figure>
+                        <figure class="research-image">
+                            <img src="IC_error2_2.png" alt="Your Photo">
+                            <figcaption>Fig c: A snapshot of analysis of information complexity of AND function.</figcaption>
+                        </figure>
+                    </div>
+                </details>
+                </i>
+                <br>
+
+               <li>
+                Yaqiao Li, Conflict complexity is lower bounded by block sensitivity,
+                <i><a href="https://www.sciencedirect.com/science/article/pii/S0304397520307726" target="_blank">Theoretical Computer Science 856 (2021) 169–172</a></i>.
+                <a href="https://arxiv.org/abs/1810.08873" target="_blank">arXiv:1810:08873</a>. 
+                </li>
+                <i>
+                <details>
+                    <summary>click for a Summary:</summary>
+                    If you use a decision tree to compute a composition of two Boolean functions f and g, how does this relate to a decision tree computing f and a decision tree computing g? The measure of conflict complexity was proposed to study (a randomized version of) this problem. Block sensitivity is another complexity measure that tells how a function's value is affected by changing a block of its input.
+                    <div class = "research-images-container">
+                        <figure class="research-image">
+                            <img src="Conflict_decisiontree.png" alt="Your Photo">
+                            <figcaption>Fig a: A decision tree computing a Boolean function. Picture from wikipedia.</figcaption>
+                        </figure>
+                    </div>  
+                    This paper showed block sensitivity is no greater than conflict complexity, and posed an open problem concerning conflict complexity and certificate complexity, solution of which would have interesting consequences.
+                    <div class = "research-images-container">
+                        <figure class="research-image">
+                            <img src="conflict_Q.png" alt="Your Photo">
+                            <figcaption>Fig b: An open question proposed in this work.</figcaption>
+                        </figure>
+                    </div>  
+                </details>
+                </i>
+                <br>
+
+                <li>
+                <a href="http://www.cs.technion.ac.il/people/yuvalfi/" target="_blank">Yuval Filmus</a>, 
+                <a href="http://cs.mcgill.ca/~hatami/" target="_blank">Hamed Hatami</a>, 
+                Yaqiao Li,
+                Suzin You,
+                Information complexity of the AND function in the two-party and multiparty settings, 
+                <i>COCOON 2017, <a href="https://doi.org/10.1007/s00453-018-0484-8" target="_blank">Algorithmica vol 81, 4200–4237(2019)</a></i>. 
+                <a href="https://arxiv.org/abs/1703.07833" target="_blank">arXiv:1703.07833</a>.
+                Here is the <a href="./files/MultiAnd.nb">Mathematica code</a> used in this paper. 
+                </li>
+                <i>
+                <details>
+                    <summary>click for a Summary:</summary>
+                    Information complexity, incorporating Shannon's information theory into communication models, is a continuous version of communication complexity. Initially, it was used to help study communication complexity, and later found many other applications such as in optimization and in circuit complexity, etc.
+                    <div class = "research-images-container">
+                        <figure class="research-image">
+                            <img src="IC_people.jpg" alt="Your Photo">
+                            <figcaption>Fig a: Shannon, Yao, Braverman. Photo from wikipedia and amturing.acm.org.</figcaption>
+                        </figure>
+                    </div>
+                    This paper extended the optimal procol for two-party AND function in Braverman et. al. to multi-party, in doing so we had to invent various reductions and do meticulous calculation and computation.
+                    <div class = "research-images-container">
+                        <figure class="research-image">
+                            <img src="Info_multiparty_1.png" alt="Your Photo">
+                            <figcaption>Fig b: The (information cost) optimal  protocol for computing k-party AND.</figcaption>
+                        </figure>
+                        <figure class="research-image">
+                            <img src="Info_multiparty_2.png" alt="Your Photo">
+                            <figcaption>Fig c: A condition we need to verify to verify to certify optimality of the protocol.</figcaption>
+                        </figure>
+                    </div>
+                </details>
+                </i>
+                <br>
+
+                <li>
+                <a href="https://yuvaldagan.wordpress.com/" target="_blank">Yuval Dagan</a>, 
+                <a href="http://www.cs.technion.ac.il/people/yuvalfi/" target="_blank">Yuval Filmus</a>, 
+                <a href="http://cs.mcgill.ca/~hatami/" target="_blank">Hamed Hatami</a>,
+                Yaqiao Li, 
+                Trading information complexity for error,  
+                <i>CCC 2017, <a href="https://theoryofcomputing.org/articles/v014a006/" target="_blank">Theory of Computing Vol 14 (2018) Article 6 pp. 1-73</a></i>. 
+                <a href="https://arxiv.org/abs/1611.06650" target="_blank">arXiv:1611.06650</a>.
+                </li>
+                <i>
+                <details>
+                    <summary>click for a Summary:</summary>
+                    Information complexity, incorporating Shannon's information theory into communication models, is a continuous version of communication complexity. Initially, it was used to help study communication complexity, and later found many other applications such as in optimization and in circuit complexity, etc.
+                    <div class = "research-images-container">
+                        <figure class="research-image">
+                            <img src="IC_people.jpg" alt="Your Photo">
+                            <figcaption>Fig a: Shannon, Yao, Braverman. Photo from wikipedia and amturing.acm.org.</figcaption>
+                        </figure>
+                    </div>
+                    This paper, as the 1st part, initiated the basic theory of the dependency of information complexity on the error allowed in computation. This led to a more accurate formula of the randomized communication complexity of the important disjointness function, and a solution of an open problem of Braverman.
+                    <div class = "research-images-container">
+                        <figure class="research-image">
+                            <img src="Info_error1_1.png" alt="Your Photo">
+                            <figcaption>Fig b: The formula for the randomized communication complexity of the disjointness function.</figcaption>
+                        </figure>
+                        <figure class="research-image">
+                            <img src="Info_error1_2.png" alt="Your Photo">
+                            <figcaption>Fig c: A communication protocol with economic information cost for the disjointness function.</figcaption>
+                        </figure>
+                    </div>
+                </details>
+                </i>
+                <br>
+            </ol> 
+
+
+            <li><b>Online Computation</b></li>
+            <ol>
+                <li>
+                Yaqiao Li, 
+                Ali Mohammad Lavasani, 
+                <a href="https://users.encs.concordia.ca/~denisp/" target="_blank">Denis Pankratov</a>, Online interval selection on a simple chain,
+                <i>submitted</i>.
+                </li>
+                <i>
+                <details>
+                    <summary>click for a Summary:</summary>
+                    Interval selection models many resource-optimizing scheduling and other conflict-resovling problems. This work shows that a natural revoking algorithm in fact performs worse than the greedy algorithm, when the input intervals form a simple chain and arrive randomly. The solution relies on a clever choice of a partition, and on calculating the resulting infinite series via solving differential equations. We also obtain other bounds, in particular, a first nearly tight bound for advice complexity in this model. <br>
+
+                    <b>A fascinating challenge</b> (we have unsuccessful attempts) is to understand the performance of the revoking algorithm on general interval graphs.
+                </details>
+                </i>
+                <br>
+
+                <li>
+                Yaqiao Li, Mahtab Masoori, 
+                <a href="https://users.encs.concordia.ca/~lata/" target="_blank">Lata Narayanan</a>,
+                <a href="https://users.encs.concordia.ca/~denisp/" target="_blank">Denis Pankratov</a>, Renting servers for multi-parameter jobs in the cloud,
+                <i>ICDCN 2025 (<b>best paper award</b>)</i>.
+                <a href="https://dl.acm.org/doi/10.1145/3700838.3700850" target="_blank">ICDCN conference version</a>.
+                <a href="https://arxiv.org/abs/2404.15444" target="_blank">arXiv:2404.15444</a>.
+                </li>
+                <i>
+                <details>
+                    <summary>click for a Summary:</summary>
+                    Computing in cloud has many advantages that leads to overall better social welfare, e.g., some companies such as in gaming industry rent servers from public cloud companies for their computational tasks. A basic problem is how to schedule diverse requirements to minimize cost of running cloud servers, this is a dynamic vector bin packing problem called RSiC.
+                    <div class = "research-images-container">
+                        <figure class="research-image">
+                            <img src="RSiC_cloud_servers.png" alt="Your Photo">
+                            <figcaption>Fig a: Servers in the cloud (AI generated image, credit to tongyi[通义]).</figcaption>
+                        </figure>
+                        <figure class="research-image">
+                            <img src="OHC_VBP.png" alt="Your Photo">
+                            <figcaption>Fig b: A picture of high dimensional bin packing in AI's mind (AI generated image, credit to tongyi[通义]).</figcaption>
+                        </figure>
+                    </div>  
+                    This paper, among other results, proposed a new and natural greedy-type algorithm that we call 'Greedy', and demonstrated in simulation that it outperforms other existing algorithms in the majority of cases. Thus, 'Greedy' could be useful for industrial applications.
+                    <div class = "research-images-container">
+                        <figure class="research-image">
+                            <img src="RSiC_greedy.png" alt="Your Photo">
+                            <figcaption>Fig c: Simulation shows our 'Greedy' algorithm outperforms other algorithms.</figcaption>
+                        </figure>
+                    </div>  
+                </details>
+                </i>
+                <br>
+
+                <li>
+                <a href="https://imada.sdu.dk/u/joan/" target="_blank">Joan Boyar</a>, 
+                <a href="https://www.eecs.yorku.ca/~kamalis/" target="_blank">Shahin Kamali</a>, 
+                <a href="https://www.imada.sdu.dk/u/kslarsen/" target="_blank">Kim S. Larsen</a>, 
+                Ali Mohammad Lavasani, Yaqiao Li, 
+                <a href="https://users.encs.concordia.ca/~denisp/" target="_blank">Denis Pankratov</a>, On the Online Weighted Non-Crossing Matching Problem,
+                <i>SWAT 2024</i>.
+                <a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SWAT.2024.16" target="_blank">SWAT conference version</a>.
+                </li>
+                <i>
+                <details>
+                    <summary>click for a Summary:</summary>
+                    Matching is a common task in nature, society, and mathematics. Avoiding crossing (of matching lines/curves) is a desired sometimes indispensable condition, such as for circuit design and understanding RNA structures, etc. 
+                    <div class = "research-images-container">
+                        <figure class="research-image">
+                            <img src="non_crossing_matching_RNA.png" alt="Your Photo">
+                            <figcaption>Fig a: A picture showing how RNA is related to k-noncrossing matching from 
+                                    <a href="https://arxiv.org/abs/0906.5553" target="_blank">this paper</a>.</figcaption>
+                        </figure>
+                    </div> 
+                    This paper introduced the online and weighted version of the non-crossing matching problem, and gave optimal or competitive online algorithms and lower bounds in various models. In particular, we found a beautiful 1/3-competitive randomized algorithm, which uses a binary tree to guide its matching decisions.
+                    <div class = "research-images-container">
+                        <figure class="research-image">
+                            <img src="non_crossing_matching_ours.png" alt="Your Photo">
+                            <figcaption>Fig b: A figure illustrating a deterministic algorithm in our paper.</figcaption>
+                        </figure>
+                    </div> 
+                </details>
+                </i>
+                <br>
+
+                <li>
+                Yaqiao Li, 
+                <a href="https://users.encs.concordia.ca/~denisp/" target="_blank">Denis Pankratov</a>, Online Vector Bin Packing and Hypergraph Coloring Illuminated: Simpler Proofs and New Connections,
+                <i>LAGOS 2023</i>,
+                <a href="https://arxiv.org/abs/2306.11241" target="_blank">arXiv:2306.11241</a>.
+                </li>
+                <i>
+                <details>
+                    <summary>click for a Summary:</summary>
+                    Bin packing is a classical NP-complete optimizaiton problem that is also of practical importance such as in loading cargo for shipping, creating file backups in media, etc.
+                    <div class = "research-images-container">
+                        <figure class="research-image">
+                            <img src="bin_packing_example.png" alt="Your Photo">
+                            <figcaption>Fig a: Illustration of 3-dimensional bin packing. Figure from the paper `Hybrid approach for solving real-world bin packing problem instances using quantum annealers' by Romero et. al.</figcaption>
+                        </figure>
+                        <figure class="research-image">
+                            <img src="OHC_VBP.png" alt="Your Photo">
+                            <figcaption>Fig b: A picture of high dimensional bin packing in AI's mind (AI generated image, credit to tongyi[通义]).</figcaption>
+                        </figure>        
+                    </div> 
+                    This paper introduced the online incidence matrix associated with the online hypergraph, which naturally led to a simple reduction from online hypergraph coloring to online vector bin packing, thus simplified a previous breakthrough by Azar et. al.. This paper also showed a 'diverse' multi-family has an interesting intersecting property, thus resolved a conjecture on online hypergraph coloring by Nagy-György and Imreh.
+                    <div class = "research-images-container">
+                        <figure class="research-image">
+                            <img src="OHC_1.png" alt="Your Photo">
+                            <figcaption>Fig c: Illustration of the online incidence matrix that we defined in this work.</figcaption>
+                        </figure>
+                        <figure class="research-image">
+                            <img src="OHC_2.png" alt="Your Photo">
+                            <figcaption>Fig d: Illustration of proving a conjecture on online hypergraph coloring by Nagy-György and Imreh.</figcaption>
+                        </figure>        
+                    </div> 
+                </details>
+                </i>
+                <br>
+
+                <li>
+                Yaqiao Li, <a href="https://www.cs.mcgill.ca/~vnaray4/" target="_blank">Vishnu V. Narayan</a>, 
+                <a href="https://users.encs.concordia.ca/~denisp/" target="_blank">Denis Pankratov</a>, Online coloring and a new type of adversary for online graph problems,
+                <i>WAOA 2020</i>,
+                <a href="https://doi.org/10.1007/s00453-021-00920-w" target="_blank">Algorithmica (2022)</a>.
+                <a href="https://arxiv.org/abs/2005.10852" target="_blank">arXiv:2005.10852</a>.
+                </li>
+                <i>
+                <details>
+                    <summary>click for a Summary:</summary>
+                    Many large networks are constructed online, such as social networks and internet. Such graphs can be modelled by online graph, where at each time step a vertex appears together with its set of edges to some of existing vertices. A fundamental question is: suppose an online graph has completed its construction and turns out to be k-colorable, then, how many colors do we need if we have to irrevocably color every vertex as soon as it appears? A line of work including Lovász et. al. and  Gutowski et. al. gives satisfactory understanding for bipartite graphs. For  3-colorable graphs nontrivial progress has also been made, but far from satisfactory. 
+                    <div class = "research-images-container">
+                        <figure class="research-image">
+                            <img src="OC_social_networks.png" alt="Your Photo">
+                            <figcaption>Fig a: Social networks could facilitate and enrich our lives. Picture from baidu.</figcaption>
+                        </figure>
+                        <figure class="research-image">
+                            <img src="OC_AI_SN.png" alt="Your Photo">
+                            <figcaption>Fig b: Social networks connect people in universe (AI generated image, credit to tongyi[通义]).</figcaption>
+                        </figure>        
+                    </div>
+                    Motivated to explore the strength and weakness of existing techniques, this paper introduced the bounded components model. One one hand, we discovered that the efficiency for coloring online bipartite graph is accurately determined by the number of connected components during the online construction. In comparison, we showed that bounded components is not a serious constraint for 3-colorable graphs.
+                    <div class = "research-images-container">
+                        <figure class="research-image">
+                            <img src="OC_kappa_1.png" alt="Your Photo">
+                            <figcaption>Fig c: A snapshot of the analysis for online coloring bipartite graphs.</figcaption>
+                        </figure>
+                        <figure class="research-image">
+                            <img src="OC_kappa_2.png" alt="Your Photo">
+                            <figcaption>Fig d: Illustration of showing bounded components does not seem to be a serious constraint for 3-colorable graphs.</figcaption>
+                        </figure>        
+                    </div>
+                </details>
+                </i>
+                <br>
+            </ol>
+
+
+
+            <li><b>(pure) Mathematics</b></li>
+            <ol>
+                <li>
+                Yaqiao Li, 
+                Ali Mohammad Lavasani, 
+                Mehran Shakerinava, 
+                Newman's theorem via Carathéodory,
+                <a href="https://arxiv.org/pdf/2406.08500" target="_blank">arXiv:2406.08500</a>.
+                </li>
+                <i>
+                <details>
+                    <summary>click for a Summary:</summary>
+                    Randomness is useful, sometimes necessary, e.g., you do not want to play a simple deterministic strategy in rock paper scissors. Randomness could help save communication cost as well. Now, if you can share randomness with your communicating partner, versus that you each have private randomness, is there a difference? Newman says they do differ, but not much.
+                    <div class = "research-images-container">
+                        <figure class="research-image">
+                            <img src="Randomness_RPS1.png" alt="Your Photo">
+                            <figcaption>Fig a: Rock paper scissors: a worldwide popular game orignated from China. Second picture from wikipedia.</figcaption>
+                        </figure>
+                        <figure class="research-image">
+                            <img src="Randomness_RPS.gif" alt="Your Photo">
+                            <figcaption>Fig b: Friends play rock paper scissors, with fire.</figcaption>
+                        </figure>        
+                    </div>
+                    This paper gave a new short proof of Newman's theorem in communication complexity by applying the classical and the approximate Carathéodory's theorems in convex geometry.
+                    <div class = "research-images-container">
+                        <figure class="research-image">
+                            <img src="Newman_Cara.png" alt="Your Photo">
+                            <figcaption>Fig c: About 80% of the proof.</figcaption>
+                        </figure>
+                    </div>
+                </details>
+                </i>
+                <br>
+
+                <li>
+                <a href="https://www.cs.mcgill.ca/~lhamba/" target="_blank">Lianna Hambardzumyan</a>, 
+                Yaqiao Li,
+                Chang's lemma via Pinsker's inequality, 
+                <i><a href="https://www.sciencedirect.com/science/article/pii/S0012365X19301347" target="_blank">Discrete Mathematics, vol 343, iss 1 (2020)</a></i>.
+                <a href="https://arxiv.org/abs/2005.10830" target="_blank">arXiv:2005.10830</a>
+                </li>
+                <i>
+                <details>
+                    <summary>click for a Summary:</summary>
+                    This paper, extending the idea in Impagliazzo et.al., gave a short information theoretic proof for Chang's lemma via Pinsker's inequality.
+                    <div class = "research-images-container">
+                        <figure class="research-image">
+                            <img src="Chang_Pinsker.png" alt="Your Photo">
+                            <figcaption>Fig a: About 80% of the proof.</figcaption>
+                        </figure>
+                    </div>
+                </details>
+                </i>
+                <br>
+
+                <li>
+                <a href="http://cs.mcgill.ca/~hatami/" target="_blank">Hamed Hatami</a>, 
+                <a href="https://pooyahatami.org/" target="_blank">Pooya Hatami</a>,
+                Yaqiao Li,  
+                A characterization of functions with vanishing averages over products of disjoint sets,  
+                <i><a href="https://www.sciencedirect.com/science/article/pii/S0195669816000317" target="_blank">European J. Combin., vol 56 (2016) 81–93</a></i>.
+                <a href="http://arxiv.org/abs/1411.2314" target="_blank">arXiv:1411.2314</a>.
+                </li>
+                <i>
+                <details>
+                    <summary>click for a Summary:</summary>
+                    Random graph is an important model in mathematics, physics, computer science, and in studying epidemics such as COVID-19. The Erdős–Rényi random graph has its edges generated independently  with some probability p. A graph is quasi-random if it has similar statistics of subgraph-counts with the Erdős–Rényi random graph, e.g., the number of triangles should be close to n^3 p^3.
+                    <div class = "research-images-container">
+                        <figure class="research-image">
+                            <img src="random_networks.png" alt="Your Photo">
+                            <figcaption>Fig a: Various random networks, picture from 'Random Networks and their Applications to the COVID-19 Pandemic' by Joseph Sheely.</figcaption>
+                        </figure>
+                    </div>
+
+
+                    Although graphs seem combinatorial in nature, this paper used an analytic tool called Walsh expansion to understand the structure of functions satisfying certain integration property, the structure discovered led to resolving some of the conjectures on quasi-random graphs by Janson and Sós. 
+                    <!---- Pierre Deligne (Fields Medalist) wrote a letter commenting our structure theorem.--->
+                    <div class = "research-images-container">
+                        <figure class="research-image">
+                            <img src="Walsh_1.png" alt="Your Photo">
+                            <figcaption>Fig b: The structure theorem.</figcaption>
+                        </figure>
+                        <figure class="research-image">
+                            <img src="Walsh_2.png" alt="Your Photo">
+                            <figcaption>Fig c: A snapshot of the proof.</figcaption>
+                        </figure>        
+                    </div>
+                </details>
+                </i>
+                <br>
+
+                <li>
+                Yaqiao Li, 
+                The winning property of mixed badly approximable numbers,  
+                <i>Moscow J. Comb. Number Theory, vol 3 issue 1 (2013)</i>. 
+                <a href="http://arxiv.org/abs/1212.6584" target="_blank">arXiv:1212.6584</a>.
+                </li>
+                <i>
+                <details>
+                    <summary>click for a Summary:</summary>
+                    This paper improved the winning property of mixed badly approximable numbers to the best possible, thus answered in affirmative a question in a survey of N. Moshchevitin.
+                    <div class = "research-images-container">
+                        <figure class="research-image">
+                            <img src="Bad_1.png" alt="Your Photo">
+                            <figcaption>Fig a: Badly approximable numbers.</figcaption>
+                        </figure>        
+                    </div>    
+                </details>
+                </i>
+                <br>
+            </ol>
+
+
+            <li><b>Social Science</b></li>
+            <ol>
+                <li>
+                Yaqiao Li, 
+                <a href="https://users.encs.concordia.ca/~lata/" target="_blank">Lata Narayanan</a>,
+                <a href="https://users.encs.concordia.ca/~opatrny/" target="_blank">Jaroslav Opatrny</a>,
+                <a href="https://ytixu.github.io/" target="_blank">Yi Tian Xu</a>, Diversity-seeking swap games in networks,
+                <i>AAMAS 2025</i>.
+                </li>
+                <i>
+                <details>
+                    <summary>click for a Summary:</summary>
+                    Diversity is observed to be beneficial in social and working environment, and UN calls biodiversity "our strongest natural defense against climate change". Darwin and Wallace already discovered that ecosystem diversity, via niche differentiation,  supports higher productivity and better invasion resistance, than a monoculture. Schelling in his original study of segregation of residential neighborhoods (Dynamic models of segregation, 1971) has already, perhaps presciently, experimented diversity-seeking agents (of two types only), called "integrationist", and discovered "phenomena that are not present in the case of purely separatist demands", e.g., "integration requires more complex patterning than separation". Hayes (The Math of Segregation, 2013) observed that  "the social fabric of segregation has begun to fray"  and "the time has come for a model of racial reintegration".
+                    <div class = "research-images-container">
+                        <figure class="research-image">
+                            <img src="diverse_fruits.png" alt="Your Photo">
+                            <figcaption>Fig a: Picture from wikipedia, cite:"The diverse forest canopy on Barro Colorado Island, Panama, yielded this display of different fruit".</figcaption>
+                        </figure>       
+                        <figure class="research-image">
+                            <img src="diverse_ppl.png" alt="Your Photo">
+                            <figcaption>Fig b: Different peoples live together on earth.</figcaption>
+                        </figure>           
+                    </div>     
+                    This paper, parallel to the famous Schelling game, modelled diversity-seeking agents and studied their swap games, whose equilibria are measured by several diversity measures we proposed. The theory and simulation both showed that segregation would be effectively removed if agents become diversity-seeking, though strong diversity measures such as evenness is still hard to achieve.
+                    <div class = "research-images-container">
+                        <figure class="research-image">
+                            <img src="diversity_swap_game_2.png" alt="Your Photo">
+                            <figcaption>Fig c: Comparing diversity via simulation of divserity-seeking swap games on a (degree 4) grid, the result is measured by four diversity measures.</figcaption>
+                        </figure>       
+                        <figure class="research-image">
+                            <img src="diversity_swap_game_1.png" alt="Your Photo">
+                            <figcaption>Fig d: A topology certifying simultaneous low diversity for several diversity measures.</figcaption>
+                        </figure>           
+                    </div>         
+                </details>
+                </i>
+                <br>
+
+
+                <li>
+                Dingyu Zhang,
+                Yaqiao Li, 
+                Nadia Bhuiyan, 
+                A Tale of Two Organizational Structures,
+                <a href="./Two_Orgnizational_Structures.pdf" target="_blank">pdf</a>.
+                <!-------------
+                <a href="./files/A_Tale_of_Two_Orgnizational_Structures.pdf" target="_blank">download a copy</a>
+                ----->
+                </li>
+                <i>
+                <details>
+                    <summary>click for a Summary:</summary>
+                    An organization/team consists of diverse people often of distinct capabilities, this we call the team structure. A team makes its decision by aggregating individuals' decisions according to certain pre-speficied rules (e.g., polyarchy, hierarchy, committee, etc) , this we call the decision structure. If an organization has a fixed team, how should it chooses its decision structure? Similarly, if an organization has a fixed decision structure (e.g., cannot be easily changed), what types of people it should hire? More generally, if both sturctures are subject to design (e.g., for a new company), how does an organization systematically consider its various choices? 
+                    <div class = "research-images-container">
+                        <figure class="research-image">
+                            <img src="two_structure_team.jpg" alt="Your Photo">
+                            <figcaption>Fig a: A team with diverse members. Picture from the movie Inception, showing distinct/complementary capabilities are vital for the success of the team.</figcaption>
+                        </figure>       
+                        <figure class="research-image">
+                            <img src="two_structure_decision.png" alt="Your Photo">
+                            <figcaption>Fig b: Illustration of polyarchy and hierarchy decision structures. Picture from `The architecture of economic systems: Hierarchies and polyarchies' by  Sah and Stiglitz.</figcaption>
+                        </figure>           
+                    </div>
+                    This paper, using university faculty hiring as a guiding example, modeled these two structures into one framework and studied carefully the interplay between the two, and how they together influence on an organization's performance. Some findings are surprising to the extent of counter-intuitive at the first sight.
+                    <div class = "research-images-container">
+                        <figure class="research-image">
+                            <img src="two_structures.png" alt="Your Photo">
+                            <figcaption>Fig c: Illustration of the choice of team and decision structures in an organization.</figcaption>
+                        </figure>       
+                        <figure class="research-image">
+                            <img src="two_structure_university.png" alt="Your Photo">
+                            <figcaption>Fig d: Our model can help to identify an optimal choice of team and decision structures with respect to the change of the scenario.</figcaption>
+                        </figure>           
+                    </div>      
+                </details>
+                </i>
+                <br>
+            </ol>
+
+
+
+
+            <li><b>Intelligence</b></li>
+            <ol>
+                <li>
+                <a href="http://www.cim.mcgill.ca/~yxu219/" target="_blank">Yi Tian Xu</a>, 
+                Yaqiao Li,
+                <a href="https://www.cim.mcgill.ca/~dmeger/" target="_blank">David Meger</a>, 
+                Human motion prediction via pattern completion in latent representation space, 
+                <i>CRV 2019</i>.
+                <a href="https://arxiv.org/abs/1904.09039" target="_blank">arXiv:1904.09039</a>.
+                </li>
+                <i>
+                <details>
+                    <summary>click for a Summary:</summary>
+                    Knowledge of how humans move can help intelligent robots in tasks involving an interactive human environment, such as navigating through a crowded street, or playing sports or tabletop games with humans.
+                    <div class = "research-images-container">
+                        <figure class="research-image">
+                            <img src="Robot_walk.png" alt="Your Photo">
+                            <figcaption>Fig a: Robots walk along with people (AI generated image, credit to tongyi[通义]).</figcaption>
+                        </figure>       
+                    </div>  
+                    This paper, inspired by ideas in cognitive science, proposed a new and general approach to solve human motion understanding via pattern completion on a learned latent representation space. Our model outperforms current state-of-the-art in human motion prediction across a number of tasks, with no customization. The architecture uses a new and generic autoencoder based on sequence-to-sequence learning. See <a href="http://www.cim.mcgill.ca/~yxu219/pattern-completion-learning.html?" target="_blank">here</a>  for more introduction of this work by the first author Yi Tian Xu.
+                    <div class = "research-images-container">
+                        <figure class="research-image">
+                            <img src="PatternCompletion_1.png" alt="Your Photo">
+                            <figcaption>Fig b: A figure showing learned representation helps prediction.</figcaption>
+                        </figure>    
+                        <figure class="research-image">
+                            <img src="PatternCompletion_2.png" alt="Your Photo">
+                            <figcaption>Fig c: The Autoencoder achitecture.</figcaption>
+                        </figure>              
+                    </div>          
+                </details>
+                </i>
+                <br>
+            </ol>
+
+
+            </ul> 
+            </p>
+
+
+
+
+
+            </div>
+            <div id="teaching" class="tab-content" style="display:none;">
+                <!--- <h2>Teaching</h2> --->
+                <p>
+                <ul> <!--- style="list-style-type:disc"--->
+                <li>COMP 6651: Algorithm Design Techniques, Concordia, 2023/01 to 2023/04.</li>
+                <li><a href="dm.html" target="_blank">Discrete Mathematics</a>, SMBU, 2022/03 to 2022/06.</li>
+                <li> <a href="co.html" target="_blank">COMP/MATH 552</a> Combinatorial Optimization, McGill,  2018/01 to 2018/04. </li>
+                </ul>
+                </p>
+            </div>
+            <div id="CV" class="tab-content" style="display:none;">
+                <h3>Work</h3>
+                <p><ul style="list-style-type:disc">
+                    <li>Assistant Professor, Faculty of Comp. Sci. and Control Eng., <a href="https://www.suat-sz.edu.cn/" target="_blank">SUAT</a>, 2024/5 to now. </li>                  
+                    <li>Postdoc researcher, Department of Com. Sci. and Soft. Eng.,  Concordia, 2023/01 to 2024/01. Advised by professor <a href="https://users.encs.concordia.ca/~denisp/" target="_blank">Denis Pankratov</a> and professor <a href="https://users.encs.concordia.ca/~lata/" target="_blank">Lata Narayanan</a>. </li>
+                    <li>Senior Lecturer, Department of Electronic and Computer Engineering, SMBU, 2021/10 to 2022/09. </li>
+                    <li>Postdoc researcher, Department of Computer Science,  UdeM, 2019/11 to 2021/07. Advised by professor <a href="http://www.iro.umontreal.ca/~mckenzie/" target="_blank">Pierre McKenzie</a>.</li>
+                </ul></p>
+
+                <h3>Education</h3>
+                <p> <ul style="list-style-type:disc">
+                    <li>Ph.D student in Computer Science, <a href="http://www.cs.mcgill.ca/" target="_blank">School of Computer Science</a>, <a href="http://www.mcgill.ca/" target="_blank">McGill</a>, 2015/01 to 2019/10. Advised by professor <a href="http://cs.mcgill.ca/~hatami/" target="_blank">Hamed Hatami</a>.</li>
+                    <li>Visiting Graduate Student, <a href="https://simons.berkeley.edu/" target="_blank">Simons Institute for the Theory of Computing</a>, Oct. 1-31, 2018.</li>
+                    <li>Ph.D student in Industrial Engineering, <a href="https://www.concordia.ca/encs/mechanical-industrial.html" target="_blank">Dept. of MIE</a>, <a href="http://www.concordia.ca" target="_blank">Concordia</a>, 2013/09 to 2014/12. Advised by professor <a href="http://users.encs.concordia.ca/~mychen/" target="_blank">Mingyuan Chen</a>. (Dropped)</li>
+                    <li>Master in Pure Mathematics, <a href="http://www.math.pku.edu.cn/" target="_blank">School of Mathematical Sciences</a>, <a href="http://www.pku.edu.cn/" target="_blank">PKU</a>, 2010/09 to 2013/07. Advised by professor <a href="http://www.math.pku.edu.cn/teachers/anjp/" target="_blank">Jinpeng An</a>.</li>
+                    <li>Bachelor in Computer Science and Technology, <a href="http://cise.ecust.edu.cn/" target="_blank">School of Information Science and Engineering</a>, <a href="http://www.ecust.edu.cn/" target="_blank">ECUST</a>, 2002/09 to 2007/07. </li>
+                </ul> </p>
+
+                <h3>Teaching</h3>
+                <p><ul style="list-style-type:disc">
+                    <li>Lecturer, COMP 6651: Algorithm Design Techniques, Concordia,  2023/01 to 2023/04.</li>
+                    <li>Lecturer, <a href="dm.html" target="_blank">Discrete Math</a>, SMBU, 2022/03 to 2022/06.</li>
+                    <li>Lecturer, <a href="co.html" target="_blank">COMP/MATH 552</a> Combinatorial Optimization, McGill,  2018/01 to 2018/04.</li>
+                    <li>Teaching Assistant for COMP360 Algorithm Design, McGill, Winter 2019.</li>
+                    <li>Teaching Assistant for COMP531 Advanced Theory of Computation, McGill, Winter 2018. </li>
+                    <li>Teaching Assistant for COMP330 Theory of Computation, McGill, Fall 2016 , Fall 2017. </li>
+                    <li>Teaching Assistant (Marking) for Lie Groups and Their Representations, PKU, Fall 2012.</li>
+                    <li>Teaching Assistant (Tutorial) for Advanced Algebra, PKU, Fall 2011. </li>
+                    <li>Teaching Assistant (Tutorial) for Linear Algebra, PKU, Spring 2011, Fall 2011, Spring 2012. </li>
+                </ul> </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(tabName) {
+            let i;
+            let tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = "none";
+            }
+            let tabButtons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].className = tabButtons[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.className += " active";
+        }
+
+        function openInnerTab(tabName) {
+            let i;
+            let tabContent = document.getElementsByClassName("inner-tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = "none";
+            }
+            let tabButtons = document.getElementsByClassName("inner-tab-button");
+            for (i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].className = tabButtons[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.className += " active";
+        }
+    </script>
+
+</body>
+</html>
