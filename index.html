@@ -209,8 +209,8 @@
                 <div class="inner-tabs">
                     <div class="inner-tab-buttons">
                         <button class="inner-tab-button active" onclick="openInnerTab('ts')">Time & Space & Information</button>
-                        <button class="inner-tab-button" onclick="openInnerTab('colors')">Graph Coloring</button>
-                        <button class="inner-tab-button" onclick="openInnerTab('online')">Online Algorithms</button>
+                        <button class="inner-tab-button" onclick="openInnerTab('online')">Incomplete Info(Online Algorithms)</button>
+                        <button class="inner-tab-button" onclick="openInnerTab('colors')">(Online) Graph Coloring</button>
                         <button class="inner-tab-button" onclick="openInnerTab('math')">MATH</button>
                     </div>
 
@@ -427,83 +427,7 @@
 
                     
                     
-                    <div id="colors" class="inner-tab-content" style="display:none;">
-                        <p>Graph coloring is a fundamental mathematical topic with broad applications in computational resource allocation. My research investigates the lower and upper bounds of online graph coloring, and its connections to other online problems such as bin packing.</p>
-                        <p><b>I'm currently exploring the intricate nature of online coloring 3-colorable graphs. </b></p>
-                        <ol>
-                            <li>
-                            Yaqiao Li, 
-                            <a href="https://users.encs.concordia.ca/~denisp/" target="_blank">Denis Pankratov</a>, Online Vector Bin Packing and Hypergraph Coloring Illuminated: Simpler Proofs and New Connections,
-                            <i>LAGOS 2023</i>,
-                            <a href="https://arxiv.org/abs/2306.11241" target="_blank">arXiv:2306.11241</a>.
-                            </li>
-                            <i>
-                            <details>
-                                <summary>click for a Summary:</summary>
-                                Bin packing is a classical NP-complete optimizaiton problem that is also of practical importance such as in loading cargo for shipping, creating file backups in media, etc.
-                                <div class = "research-images-container">
-                                    <figure class="research-image">
-                                        <img src="bin_packing_example.png" alt="Your Photo">
-                                        <figcaption>Fig a: Illustration of 3-dimensional bin packing. Figure from the paper `Hybrid approach for solving real-world bin packing problem instances using quantum annealers' by Romero et. al.</figcaption>
-                                    </figure>
-                                    <figure class="research-image">
-                                        <img src="OHC_VBP.png" alt="Your Photo">
-                                        <figcaption>Fig b: A picture of high dimensional bin packing in AI's mind (AI generated image, credit to tongyi[通义]).</figcaption>
-                                    </figure>        
-                                </div> 
-                                This paper introduced the online incidence matrix associated with the online hypergraph, which naturally led to a simple reduction from online hypergraph coloring to online vector bin packing, thus simplified a previous breakthrough by Azar et. al.. This paper also showed a 'diverse' multi-family has an interesting intersecting property, thus resolved a conjecture on online hypergraph coloring by Nagy-György and Imreh.
-                                <div class = "research-images-container">
-                                    <figure class="research-image">
-                                        <img src="OHC_1.png" alt="Your Photo">
-                                        <figcaption>Fig c: Illustration of the online incidence matrix that we defined in this work.</figcaption>
-                                    </figure>
-                                    <figure class="research-image">
-                                        <img src="OHC_2.png" alt="Your Photo">
-                                        <figcaption>Fig d: Illustration of proving a conjecture on online hypergraph coloring by Nagy-György and Imreh.</figcaption>
-                                    </figure>        
-                                </div> 
-                            </details>
-                            </i>
-                            <br>
-
-                            <li>
-                            Yaqiao Li, <a href="https://www.cs.mcgill.ca/~vnaray4/" target="_blank">Vishnu V. Narayan</a>, 
-                            <a href="https://users.encs.concordia.ca/~denisp/" target="_blank">Denis Pankratov</a>, Online coloring and a new type of adversary for online graph problems,
-                            <i>WAOA 2020</i>,
-                            <a href="https://doi.org/10.1007/s00453-021-00920-w" target="_blank">Algorithmica (2022)</a>.
-                            <a href="https://arxiv.org/abs/2005.10852" target="_blank">arXiv:2005.10852</a>.
-                            </li>
-                            <i>
-                            <details>
-                                <summary>click for a Summary:</summary>
-                                Many large networks are constructed online, such as social networks and internet. Such graphs can be modelled by online graph, where at each time step a vertex appears together with its set of edges to some of existing vertices. A fundamental question is: suppose an online graph has completed its construction and turns out to be k-colorable, then, how many colors do we need if we have to irrevocably color every vertex as soon as it appears? A line of work including Lovász et. al. and  Gutowski et. al. gives satisfactory understanding for bipartite graphs. For  3-colorable graphs nontrivial progress has also been made, but far from satisfactory. 
-                                <div class = "research-images-container">
-                                    <figure class="research-image">
-                                        <img src="OC_social_networks.png" alt="Your Photo">
-                                        <figcaption>Fig a: Social networks could facilitate and enrich our lives. Picture from baidu.</figcaption>
-                                    </figure>
-                                    <figure class="research-image">
-                                        <img src="OC_AI_SN.png" alt="Your Photo">
-                                        <figcaption>Fig b: Social networks connect people in universe (AI generated image, credit to tongyi[通义]).</figcaption>
-                                    </figure>        
-                                </div>
-                                Motivated to explore the strength and weakness of existing techniques, this paper introduced the bounded components model. One one hand, we discovered that the efficiency for coloring online bipartite graph is accurately determined by the number of connected components during the online construction. In comparison, we showed that bounded components is not a serious constraint for 3-colorable graphs.
-                                <div class = "research-images-container">
-                                    <figure class="research-image">
-                                        <img src="OC_kappa_1.png" alt="Your Photo">
-                                        <figcaption>Fig c: A snapshot of the analysis for online coloring bipartite graphs.</figcaption>
-                                    </figure>
-                                    <figure class="research-image">
-                                        <img src="OC_kappa_2.png" alt="Your Photo">
-                                        <figcaption>Fig d: Illustration of showing bounded components does not seem to be a serious constraint for 3-colorable graphs.</figcaption>
-                                    </figure>        
-                                </div>
-                            </details>
-                            </i>
-                            <br>
-                        </ol>
-                    </div>
-
+                    
                     <div id="online" class="inner-tab-content" style="display:none;">
                         <p>In real-world and natural settings, data often come with incomplete information, making global optimization impossible. One such model is online computation. 
                             Currently, I study online geometric matching trying to understand a possible connection with Ramsey theory. I also study online algorithms for online resource allocation such as RSiC in cloud computing and interval selection. 
@@ -594,9 +518,89 @@
                         </ol> 
                     </div>
 
+
+                    <div id="colors" class="inner-tab-content" style="display:none;">
+                        <p>Graph coloring is a fundamental mathematical topic with broad applications in computational resource allocation. My research investigates the lower and upper bounds of online graph coloring, and its connections to other online problems such as bin packing.</p>
+                        <p><b>I'm currently exploring the intricate nature of online coloring 3-colorable graphs. </b></p>
+                        <ol>
+                            <li>
+                            Yaqiao Li, 
+                            <a href="https://users.encs.concordia.ca/~denisp/" target="_blank">Denis Pankratov</a>, Online Vector Bin Packing and Hypergraph Coloring Illuminated: Simpler Proofs and New Connections,
+                            <i>LAGOS 2023</i>,
+                            <a href="https://arxiv.org/abs/2306.11241" target="_blank">arXiv:2306.11241</a>.
+                            </li>
+                            <i>
+                            <details>
+                                <summary>click for a Summary:</summary>
+                                Bin packing is a classical NP-complete optimizaiton problem that is also of practical importance such as in loading cargo for shipping, creating file backups in media, etc.
+                                <div class = "research-images-container">
+                                    <figure class="research-image">
+                                        <img src="bin_packing_example.png" alt="Your Photo">
+                                        <figcaption>Fig a: Illustration of 3-dimensional bin packing. Figure from the paper `Hybrid approach for solving real-world bin packing problem instances using quantum annealers' by Romero et. al.</figcaption>
+                                    </figure>
+                                    <figure class="research-image">
+                                        <img src="OHC_VBP.png" alt="Your Photo">
+                                        <figcaption>Fig b: A picture of high dimensional bin packing in AI's mind (AI generated image, credit to tongyi[通义]).</figcaption>
+                                    </figure>        
+                                </div> 
+                                This paper introduced the online incidence matrix associated with the online hypergraph, which naturally led to a simple reduction from online hypergraph coloring to online vector bin packing, thus simplified a previous breakthrough by Azar et. al.. This paper also showed a 'diverse' multi-family has an interesting intersecting property, thus resolved a conjecture on online hypergraph coloring by Nagy-György and Imreh.
+                                <div class = "research-images-container">
+                                    <figure class="research-image">
+                                        <img src="OHC_1.png" alt="Your Photo">
+                                        <figcaption>Fig c: Illustration of the online incidence matrix that we defined in this work.</figcaption>
+                                    </figure>
+                                    <figure class="research-image">
+                                        <img src="OHC_2.png" alt="Your Photo">
+                                        <figcaption>Fig d: Illustration of proving a conjecture on online hypergraph coloring by Nagy-György and Imreh.</figcaption>
+                                    </figure>        
+                                </div> 
+                            </details>
+                            </i>
+                            <br>
+
+                            <li>
+                            Yaqiao Li, <a href="https://www.cs.mcgill.ca/~vnaray4/" target="_blank">Vishnu V. Narayan</a>, 
+                            <a href="https://users.encs.concordia.ca/~denisp/" target="_blank">Denis Pankratov</a>, Online coloring and a new type of adversary for online graph problems,
+                            <i>WAOA 2020</i>,
+                            <a href="https://doi.org/10.1007/s00453-021-00920-w" target="_blank">Algorithmica (2022)</a>.
+                            <a href="https://arxiv.org/abs/2005.10852" target="_blank">arXiv:2005.10852</a>.
+                            </li>
+                            <i>
+                            <details>
+                                <summary>click for a Summary:</summary>
+                                Many large networks are constructed online, such as social networks and internet. Such graphs can be modelled by online graph, where at each time step a vertex appears together with its set of edges to some of existing vertices. A fundamental question is: suppose an online graph has completed its construction and turns out to be k-colorable, then, how many colors do we need if we have to irrevocably color every vertex as soon as it appears? A line of work including Lovász et. al. and  Gutowski et. al. gives satisfactory understanding for bipartite graphs. For  3-colorable graphs nontrivial progress has also been made, but far from satisfactory. 
+                                <div class = "research-images-container">
+                                    <figure class="research-image">
+                                        <img src="OC_social_networks.png" alt="Your Photo">
+                                        <figcaption>Fig a: Social networks could facilitate and enrich our lives. Picture from baidu.</figcaption>
+                                    </figure>
+                                    <figure class="research-image">
+                                        <img src="OC_AI_SN.png" alt="Your Photo">
+                                        <figcaption>Fig b: Social networks connect people in universe (AI generated image, credit to tongyi[通义]).</figcaption>
+                                    </figure>        
+                                </div>
+                                Motivated to explore the strength and weakness of existing techniques, this paper introduced the bounded components model. One one hand, we discovered that the efficiency for coloring online bipartite graph is accurately determined by the number of connected components during the online construction. In comparison, we showed that bounded components is not a serious constraint for 3-colorable graphs.
+                                <div class = "research-images-container">
+                                    <figure class="research-image">
+                                        <img src="OC_kappa_1.png" alt="Your Photo">
+                                        <figcaption>Fig c: A snapshot of the analysis for online coloring bipartite graphs.</figcaption>
+                                    </figure>
+                                    <figure class="research-image">
+                                        <img src="OC_kappa_2.png" alt="Your Photo">
+                                        <figcaption>Fig d: Illustration of showing bounded components does not seem to be a serious constraint for 3-colorable graphs.</figcaption>
+                                    </figure>        
+                                </div>
+                            </details>
+                            </i>
+                            <br>
+                        </ol>
+                    </div>
+
+
+                    
                     <div id="math" class="inner-tab-content" style="display:none;">
                         <p>Math is at the core of theoretical computer science study. </p>
-                        <p><b>I am currently investigating a new version of Kakeya sets to analyze problems in branching programs.</b></p>
+                        <p><b>I am currently investigating a new version of Kakeya sets to analyze problems related to branching programs.</b></p>
                         <ol>                        
                         <li>
                         Yaqiao Li, 
