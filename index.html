@@ -208,15 +208,15 @@
 
                 <div class="inner-tabs">
                     <div class="inner-tab-buttons">
-                        <button class="inner-tab-button active" onclick="openInnerTab('ts')">Time & Space</button>
-                        <button class="inner-tab-button" onclick="openInnerTab('info')">Information</button>
-                        <button class="inner-tab-button" onclick="openInnerTab('colors')">Graph Colors</button>
+                        <button class="inner-tab-button active" onclick="openInnerTab('ts')">Time & Space & Information</button>
+                        <button class="inner-tab-button" onclick="openInnerTab('colors')">Graph Coloring</button>
+                        <button class="inner-tab-button" onclick="openInnerTab('online')">Online Algorithms</button>
                         <button class="inner-tab-button" onclick="openInnerTab('math')">MATH</button>
                     </div>
 
                     <div id="ts" class="inner-tab-content">
-                        <p>Time and space are fundamental computational resources analyzed within various models, including query complexity in decision trees, time-space tradeoffs in branching programs, and quantum computing models.</p>
-                        <p><b>I am currently investigating the challenge of establishing lower bounds for branching programs.</b></p>
+                        <p>Time, space, and information are fundamental computational resources analyzed within various models, including query complexity in decision trees, communication and information complexity in two-party and multi-party communication models, time-space tradeoffs in branching programs, and quantum computing models, etc.</p>
+                        <p><b>I am currently investigating the challenge of establishing better lower bounds for branching programs.</b></p>
                         <ol>
                             <li>
                             Yaqiao Li, 
@@ -291,6 +291,38 @@
                         </i>
                         <br>
 
+                       <li>
+                        Yaqiao Li, 
+                        Trading information complexity for error II: the case of a large error and external information complexity,  
+                        <a href="https://doi.org/10.1016/j.ic.2022.104952" target="_blank">Information and Computation (2022)</a>.
+                        <a href="https://arxiv.org/abs/1809.10219" target="_blank">arXiv:1809.10219</a>.
+                        </li>
+                        <i>
+                        <details>
+                            <summary>click for a Summary:</summary>
+                            Information complexity, incorporating Shannon's information theory into communication models, is a continuous version of communication complexity. Initially, it was used to help study communication complexity, and later found many other applications such as in optimization and in circuit complexity, etc.<br>
+
+                            <div class = "research-images-container">
+                                <figure class="research-image">
+                                    <img src="IC_people.jpg" alt="Your Photo">
+                                    <figcaption>Fig a: Shannon, Yao, Braverman. Photo from wikipedia and amturing.acm.org.</figcaption>
+                                </figure>
+                            </div>
+                            This paper, as the 2nd part, completed the basic theory of the dependency of information complexity on the error allowed in computation. This in particular led to an an accurate formula of error-allowed information complexity of XOR function for a special distribution.
+                            <div class = "research-images-container">
+                                <figure class="research-image">
+                                    <img src="IC_error2_1.png" alt="Your Photo">
+                                    <figcaption>Fig b: An equality for information complexity of XOR function.</figcaption>
+                                </figure>
+                                <figure class="research-image">
+                                    <img src="IC_error2_2.png" alt="Your Photo">
+                                    <figcaption>Fig c: A snapshot of analysis of information complexity of AND function.</figcaption>
+                                </figure>
+                            </div>
+                        </details>
+                        </i>
+                        <br>                            
+
                         <li>
                         Yaqiao Li, Conflict complexity is lower bounded by block sensitivity,
                         <i><a href="https://www.sciencedirect.com/science/article/pii/S0304397520307726" target="_blank">Theoretical Computer Science 856 (2021) 169–172</a></i>.
@@ -316,13 +348,166 @@
                         </details>
                         </i>
                         <br>
+
+
+
+                       
+
+                        <li>
+                        <a href="http://www.cs.technion.ac.il/people/yuvalfi/" target="_blank">Yuval Filmus</a>, 
+                        <a href="http://cs.mcgill.ca/~hatami/" target="_blank">Hamed Hatami</a>, 
+                        Yaqiao Li,
+                        Suzin You,
+                        Information complexity of the AND function in the two-party and multiparty settings, 
+                        <i>COCOON 2017, <a href="https://doi.org/10.1007/s00453-018-0484-8" target="_blank">Algorithmica vol 81, 4200–4237(2019)</a></i>. 
+                        <a href="https://arxiv.org/abs/1703.07833" target="_blank">arXiv:1703.07833</a>.
+                        Here is the <a href="./files/MultiAnd.nb">Mathematica code</a> used in this paper. 
+                        </li>
+                        <i>
+                        <details>
+                            <summary>click for a Summary:</summary>
+                            Information complexity, incorporating Shannon's information theory into communication models, is a continuous version of communication complexity. Initially, it was used to help study communication complexity, and later found many other applications such as in optimization and in circuit complexity, etc.
+                            <div class = "research-images-container">
+                                <figure class="research-image">
+                                    <img src="IC_people.jpg" alt="Your Photo">
+                                    <figcaption>Fig a: Shannon, Yao, Braverman. Photo from wikipedia and amturing.acm.org.</figcaption>
+                                </figure>
+                            </div>
+                            This paper extended the optimal procol for two-party AND function in Braverman et. al. to multi-party, in doing so we had to invent various reductions and do meticulous calculation and computation.
+                            <div class = "research-images-container">
+                                <figure class="research-image">
+                                    <img src="Info_multiparty_1.png" alt="Your Photo">
+                                    <figcaption>Fig b: The (information cost) optimal  protocol for computing k-party AND.</figcaption>
+                                </figure>
+                                <figure class="research-image">
+                                    <img src="Info_multiparty_2.png" alt="Your Photo">
+                                    <figcaption>Fig c: A condition we need to verify to verify to certify optimality of the protocol.</figcaption>
+                                </figure>
+                            </div>
+                        </details>
+                        </i>
+                        <br>
+
+                        <li>
+                        <a href="https://yuvaldagan.wordpress.com/" target="_blank">Yuval Dagan</a>, 
+                        <a href="http://www.cs.technion.ac.il/people/yuvalfi/" target="_blank">Yuval Filmus</a>, 
+                        <a href="http://cs.mcgill.ca/~hatami/" target="_blank">Hamed Hatami</a>,
+                        Yaqiao Li, 
+                        Trading information complexity for error,  
+                        <i>CCC 2017, <a href="https://theoryofcomputing.org/articles/v014a006/" target="_blank">Theory of Computing Vol 14 (2018) Article 6 pp. 1-73</a></i>. 
+                        <a href="https://arxiv.org/abs/1611.06650" target="_blank">arXiv:1611.06650</a>.
+                        </li>
+                        <i>
+                        <details>
+                            <summary>click for a Summary:</summary>
+                            Information complexity, incorporating Shannon's information theory into communication models, is a continuous version of communication complexity. Initially, it was used to help study communication complexity, and later found many other applications such as in optimization and in circuit complexity, etc.
+                            <div class = "research-images-container">
+                                <figure class="research-image">
+                                    <img src="IC_people.jpg" alt="Your Photo">
+                                    <figcaption>Fig a: Shannon, Yao, Braverman. Photo from wikipedia and amturing.acm.org.</figcaption>
+                                </figure>
+                            </div>
+                            This paper, as the 1st part, initiated the basic theory of the dependency of information complexity on the error allowed in computation. This led to a more accurate formula of the randomized communication complexity of the important disjointness function, and a solution of an open problem of Braverman.
+                            <div class = "research-images-container">
+                                <figure class="research-image">
+                                    <img src="Info_error1_1.png" alt="Your Photo">
+                                    <figcaption>Fig b: The formula for the randomized communication complexity of the disjointness function.</figcaption>
+                                </figure>
+                                <figure class="research-image">
+                                    <img src="Info_error1_2.png" alt="Your Photo">
+                                    <figcaption>Fig c: A communication protocol with economic information cost for the disjointness function.</figcaption>
+                                </figure>
+                            </div>
+                        </details>
+                        </i>
+                        <br>
+                            
                         </ol> 
                     </div>
 
-                    <div id="info" class="inner-tab-content" style="display:none;">
-                        <p>Information plays a central role in computation. 
-                            Recently, I'm studying online algorithms: computation with incomplete information when input data is online. 
-                            Previously, I studied the information requirements for fundamental distributed computing tasks, such as determining whether two parties hold intersecting subsets.</p>
+                    
+                    
+                    <div id="colors" class="inner-tab-content" style="display:none;">
+                        <p>Graph coloring is a fundamental mathematical topic with broad applications in computational resource allocation. My research investigates the lower and upper bounds of online graph coloring, and its connections to other online problems such as bin packing.</p>
+                        <p><b>I'm currently exploring the intricate nature of online coloring 3-colorable graphs. </b></p>
+                        <ol>
+                            <li>
+                            Yaqiao Li, 
+                            <a href="https://users.encs.concordia.ca/~denisp/" target="_blank">Denis Pankratov</a>, Online Vector Bin Packing and Hypergraph Coloring Illuminated: Simpler Proofs and New Connections,
+                            <i>LAGOS 2023</i>,
+                            <a href="https://arxiv.org/abs/2306.11241" target="_blank">arXiv:2306.11241</a>.
+                            </li>
+                            <i>
+                            <details>
+                                <summary>click for a Summary:</summary>
+                                Bin packing is a classical NP-complete optimizaiton problem that is also of practical importance such as in loading cargo for shipping, creating file backups in media, etc.
+                                <div class = "research-images-container">
+                                    <figure class="research-image">
+                                        <img src="bin_packing_example.png" alt="Your Photo">
+                                        <figcaption>Fig a: Illustration of 3-dimensional bin packing. Figure from the paper `Hybrid approach for solving real-world bin packing problem instances using quantum annealers' by Romero et. al.</figcaption>
+                                    </figure>
+                                    <figure class="research-image">
+                                        <img src="OHC_VBP.png" alt="Your Photo">
+                                        <figcaption>Fig b: A picture of high dimensional bin packing in AI's mind (AI generated image, credit to tongyi[通义]).</figcaption>
+                                    </figure>        
+                                </div> 
+                                This paper introduced the online incidence matrix associated with the online hypergraph, which naturally led to a simple reduction from online hypergraph coloring to online vector bin packing, thus simplified a previous breakthrough by Azar et. al.. This paper also showed a 'diverse' multi-family has an interesting intersecting property, thus resolved a conjecture on online hypergraph coloring by Nagy-György and Imreh.
+                                <div class = "research-images-container">
+                                    <figure class="research-image">
+                                        <img src="OHC_1.png" alt="Your Photo">
+                                        <figcaption>Fig c: Illustration of the online incidence matrix that we defined in this work.</figcaption>
+                                    </figure>
+                                    <figure class="research-image">
+                                        <img src="OHC_2.png" alt="Your Photo">
+                                        <figcaption>Fig d: Illustration of proving a conjecture on online hypergraph coloring by Nagy-György and Imreh.</figcaption>
+                                    </figure>        
+                                </div> 
+                            </details>
+                            </i>
+                            <br>
+
+                            <li>
+                            Yaqiao Li, <a href="https://www.cs.mcgill.ca/~vnaray4/" target="_blank">Vishnu V. Narayan</a>, 
+                            <a href="https://users.encs.concordia.ca/~denisp/" target="_blank">Denis Pankratov</a>, Online coloring and a new type of adversary for online graph problems,
+                            <i>WAOA 2020</i>,
+                            <a href="https://doi.org/10.1007/s00453-021-00920-w" target="_blank">Algorithmica (2022)</a>.
+                            <a href="https://arxiv.org/abs/2005.10852" target="_blank">arXiv:2005.10852</a>.
+                            </li>
+                            <i>
+                            <details>
+                                <summary>click for a Summary:</summary>
+                                Many large networks are constructed online, such as social networks and internet. Such graphs can be modelled by online graph, where at each time step a vertex appears together with its set of edges to some of existing vertices. A fundamental question is: suppose an online graph has completed its construction and turns out to be k-colorable, then, how many colors do we need if we have to irrevocably color every vertex as soon as it appears? A line of work including Lovász et. al. and  Gutowski et. al. gives satisfactory understanding for bipartite graphs. For  3-colorable graphs nontrivial progress has also been made, but far from satisfactory. 
+                                <div class = "research-images-container">
+                                    <figure class="research-image">
+                                        <img src="OC_social_networks.png" alt="Your Photo">
+                                        <figcaption>Fig a: Social networks could facilitate and enrich our lives. Picture from baidu.</figcaption>
+                                    </figure>
+                                    <figure class="research-image">
+                                        <img src="OC_AI_SN.png" alt="Your Photo">
+                                        <figcaption>Fig b: Social networks connect people in universe (AI generated image, credit to tongyi[通义]).</figcaption>
+                                    </figure>        
+                                </div>
+                                Motivated to explore the strength and weakness of existing techniques, this paper introduced the bounded components model. One one hand, we discovered that the efficiency for coloring online bipartite graph is accurately determined by the number of connected components during the online construction. In comparison, we showed that bounded components is not a serious constraint for 3-colorable graphs.
+                                <div class = "research-images-container">
+                                    <figure class="research-image">
+                                        <img src="OC_kappa_1.png" alt="Your Photo">
+                                        <figcaption>Fig c: A snapshot of the analysis for online coloring bipartite graphs.</figcaption>
+                                    </figure>
+                                    <figure class="research-image">
+                                        <img src="OC_kappa_2.png" alt="Your Photo">
+                                        <figcaption>Fig d: Illustration of showing bounded components does not seem to be a serious constraint for 3-colorable graphs.</figcaption>
+                                    </figure>        
+                                </div>
+                            </details>
+                            </i>
+                            <br>
+                        </ol>
+                    </div>
+
+                    <div id="online" class="inner-tab-content" style="display:none;">
+                        <p>In real-world and natural settings, data often come with incomplete information, making global optimization impossible. One such model is online computation. 
+                            Currently, I study online geometric matching trying to understand a possible connection with Ramsey theory. I also study online algorithms for online resource allocation such as RSiC in cloud computing and interval selection. 
+                            </p>
                         <ol>
 
                             <li>
@@ -405,186 +590,9 @@
                             </i>
                             <br>
                             
-                        <li>
-                        Yaqiao Li, 
-                        Trading information complexity for error II: the case of a large error and external information complexity,  
-                        <a href="https://doi.org/10.1016/j.ic.2022.104952" target="_blank">Information and Computation (2022)</a>.
-                        <a href="https://arxiv.org/abs/1809.10219" target="_blank">arXiv:1809.10219</a>.
-                        </li>
-                        <i>
-                        <details>
-                            <summary>click for a Summary:</summary>
-                            Information complexity, incorporating Shannon's information theory into communication models, is a continuous version of communication complexity. Initially, it was used to help study communication complexity, and later found many other applications such as in optimization and in circuit complexity, etc.<br>
-
-                            <div class = "research-images-container">
-                                <figure class="research-image">
-                                    <img src="IC_people.jpg" alt="Your Photo">
-                                    <figcaption>Fig a: Shannon, Yao, Braverman. Photo from wikipedia and amturing.acm.org.</figcaption>
-                                </figure>
-                            </div>
-                            This paper, as the 2nd part, completed the basic theory of the dependency of information complexity on the error allowed in computation. This in particular led to an an accurate formula of error-allowed information complexity of XOR function for a special distribution.
-                            <div class = "research-images-container">
-                                <figure class="research-image">
-                                    <img src="IC_error2_1.png" alt="Your Photo">
-                                    <figcaption>Fig b: An equality for information complexity of XOR function.</figcaption>
-                                </figure>
-                                <figure class="research-image">
-                                    <img src="IC_error2_2.png" alt="Your Photo">
-                                    <figcaption>Fig c: A snapshot of analysis of information complexity of AND function.</figcaption>
-                                </figure>
-                            </div>
-                        </details>
-                        </i>
-                        <br>
-
-                        <li>
-                        <a href="http://www.cs.technion.ac.il/people/yuvalfi/" target="_blank">Yuval Filmus</a>, 
-                        <a href="http://cs.mcgill.ca/~hatami/" target="_blank">Hamed Hatami</a>, 
-                        Yaqiao Li,
-                        Suzin You,
-                        Information complexity of the AND function in the two-party and multiparty settings, 
-                        <i>COCOON 2017, <a href="https://doi.org/10.1007/s00453-018-0484-8" target="_blank">Algorithmica vol 81, 4200–4237(2019)</a></i>. 
-                        <a href="https://arxiv.org/abs/1703.07833" target="_blank">arXiv:1703.07833</a>.
-                        Here is the <a href="./files/MultiAnd.nb">Mathematica code</a> used in this paper. 
-                        </li>
-                        <i>
-                        <details>
-                            <summary>click for a Summary:</summary>
-                            Information complexity, incorporating Shannon's information theory into communication models, is a continuous version of communication complexity. Initially, it was used to help study communication complexity, and later found many other applications such as in optimization and in circuit complexity, etc.
-                            <div class = "research-images-container">
-                                <figure class="research-image">
-                                    <img src="IC_people.jpg" alt="Your Photo">
-                                    <figcaption>Fig a: Shannon, Yao, Braverman. Photo from wikipedia and amturing.acm.org.</figcaption>
-                                </figure>
-                            </div>
-                            This paper extended the optimal procol for two-party AND function in Braverman et. al. to multi-party, in doing so we had to invent various reductions and do meticulous calculation and computation.
-                            <div class = "research-images-container">
-                                <figure class="research-image">
-                                    <img src="Info_multiparty_1.png" alt="Your Photo">
-                                    <figcaption>Fig b: The (information cost) optimal  protocol for computing k-party AND.</figcaption>
-                                </figure>
-                                <figure class="research-image">
-                                    <img src="Info_multiparty_2.png" alt="Your Photo">
-                                    <figcaption>Fig c: A condition we need to verify to verify to certify optimality of the protocol.</figcaption>
-                                </figure>
-                            </div>
-                        </details>
-                        </i>
-                        <br>
-
-                        <li>
-                        <a href="https://yuvaldagan.wordpress.com/" target="_blank">Yuval Dagan</a>, 
-                        <a href="http://www.cs.technion.ac.il/people/yuvalfi/" target="_blank">Yuval Filmus</a>, 
-                        <a href="http://cs.mcgill.ca/~hatami/" target="_blank">Hamed Hatami</a>,
-                        Yaqiao Li, 
-                        Trading information complexity for error,  
-                        <i>CCC 2017, <a href="https://theoryofcomputing.org/articles/v014a006/" target="_blank">Theory of Computing Vol 14 (2018) Article 6 pp. 1-73</a></i>. 
-                        <a href="https://arxiv.org/abs/1611.06650" target="_blank">arXiv:1611.06650</a>.
-                        </li>
-                        <i>
-                        <details>
-                            <summary>click for a Summary:</summary>
-                            Information complexity, incorporating Shannon's information theory into communication models, is a continuous version of communication complexity. Initially, it was used to help study communication complexity, and later found many other applications such as in optimization and in circuit complexity, etc.
-                            <div class = "research-images-container">
-                                <figure class="research-image">
-                                    <img src="IC_people.jpg" alt="Your Photo">
-                                    <figcaption>Fig a: Shannon, Yao, Braverman. Photo from wikipedia and amturing.acm.org.</figcaption>
-                                </figure>
-                            </div>
-                            This paper, as the 1st part, initiated the basic theory of the dependency of information complexity on the error allowed in computation. This led to a more accurate formula of the randomized communication complexity of the important disjointness function, and a solution of an open problem of Braverman.
-                            <div class = "research-images-container">
-                                <figure class="research-image">
-                                    <img src="Info_error1_1.png" alt="Your Photo">
-                                    <figcaption>Fig b: The formula for the randomized communication complexity of the disjointness function.</figcaption>
-                                </figure>
-                                <figure class="research-image">
-                                    <img src="Info_error1_2.png" alt="Your Photo">
-                                    <figcaption>Fig c: A communication protocol with economic information cost for the disjointness function.</figcaption>
-                                </figure>
-                            </div>
-                        </details>
-                        </i>
-                        <br>
+                        
                         </ol> 
                     </div>
-                    
-                    <div id="colors" class="inner-tab-content" style="display:none;">
-                        <p>Graph coloring is a fundamental mathematical topic with broad applications in computational resource allocation. My research investigates the lower and upper bounds of online graph coloring, and its connections to other online problems such as bin packing.</p>
-                        <p><b>I'm currently exploring the intricate nature of online coloring 3-colorable graphs. </b></p>
-                        <ol>
-                            <li>
-                            Yaqiao Li, 
-                            <a href="https://users.encs.concordia.ca/~denisp/" target="_blank">Denis Pankratov</a>, Online Vector Bin Packing and Hypergraph Coloring Illuminated: Simpler Proofs and New Connections,
-                            <i>LAGOS 2023</i>,
-                            <a href="https://arxiv.org/abs/2306.11241" target="_blank">arXiv:2306.11241</a>.
-                            </li>
-                            <i>
-                            <details>
-                                <summary>click for a Summary:</summary>
-                                Bin packing is a classical NP-complete optimizaiton problem that is also of practical importance such as in loading cargo for shipping, creating file backups in media, etc.
-                                <div class = "research-images-container">
-                                    <figure class="research-image">
-                                        <img src="bin_packing_example.png" alt="Your Photo">
-                                        <figcaption>Fig a: Illustration of 3-dimensional bin packing. Figure from the paper `Hybrid approach for solving real-world bin packing problem instances using quantum annealers' by Romero et. al.</figcaption>
-                                    </figure>
-                                    <figure class="research-image">
-                                        <img src="OHC_VBP.png" alt="Your Photo">
-                                        <figcaption>Fig b: A picture of high dimensional bin packing in AI's mind (AI generated image, credit to tongyi[通义]).</figcaption>
-                                    </figure>        
-                                </div> 
-                                This paper introduced the online incidence matrix associated with the online hypergraph, which naturally led to a simple reduction from online hypergraph coloring to online vector bin packing, thus simplified a previous breakthrough by Azar et. al.. This paper also showed a 'diverse' multi-family has an interesting intersecting property, thus resolved a conjecture on online hypergraph coloring by Nagy-György and Imreh.
-                                <div class = "research-images-container">
-                                    <figure class="research-image">
-                                        <img src="OHC_1.png" alt="Your Photo">
-                                        <figcaption>Fig c: Illustration of the online incidence matrix that we defined in this work.</figcaption>
-                                    </figure>
-                                    <figure class="research-image">
-                                        <img src="OHC_2.png" alt="Your Photo">
-                                        <figcaption>Fig d: Illustration of proving a conjecture on online hypergraph coloring by Nagy-György and Imreh.</figcaption>
-                                    </figure>        
-                                </div> 
-                            </details>
-                            </i>
-                            <br>
-
-                            <li>
-                            Yaqiao Li, <a href="https://www.cs.mcgill.ca/~vnaray4/" target="_blank">Vishnu V. Narayan</a>, 
-                            <a href="https://users.encs.concordia.ca/~denisp/" target="_blank">Denis Pankratov</a>, Online coloring and a new type of adversary for online graph problems,
-                            <i>WAOA 2020</i>,
-                            <a href="https://doi.org/10.1007/s00453-021-00920-w" target="_blank">Algorithmica (2022)</a>.
-                            <a href="https://arxiv.org/abs/2005.10852" target="_blank">arXiv:2005.10852</a>.
-                            </li>
-                            <i>
-                            <details>
-                                <summary>click for a Summary:</summary>
-                                Many large networks are constructed online, such as social networks and internet. Such graphs can be modelled by online graph, where at each time step a vertex appears together with its set of edges to some of existing vertices. A fundamental question is: suppose an online graph has completed its construction and turns out to be k-colorable, then, how many colors do we need if we have to irrevocably color every vertex as soon as it appears? A line of work including Lovász et. al. and  Gutowski et. al. gives satisfactory understanding for bipartite graphs. For  3-colorable graphs nontrivial progress has also been made, but far from satisfactory. 
-                                <div class = "research-images-container">
-                                    <figure class="research-image">
-                                        <img src="OC_social_networks.png" alt="Your Photo">
-                                        <figcaption>Fig a: Social networks could facilitate and enrich our lives. Picture from baidu.</figcaption>
-                                    </figure>
-                                    <figure class="research-image">
-                                        <img src="OC_AI_SN.png" alt="Your Photo">
-                                        <figcaption>Fig b: Social networks connect people in universe (AI generated image, credit to tongyi[通义]).</figcaption>
-                                    </figure>        
-                                </div>
-                                Motivated to explore the strength and weakness of existing techniques, this paper introduced the bounded components model. One one hand, we discovered that the efficiency for coloring online bipartite graph is accurately determined by the number of connected components during the online construction. In comparison, we showed that bounded components is not a serious constraint for 3-colorable graphs.
-                                <div class = "research-images-container">
-                                    <figure class="research-image">
-                                        <img src="OC_kappa_1.png" alt="Your Photo">
-                                        <figcaption>Fig c: A snapshot of the analysis for online coloring bipartite graphs.</figcaption>
-                                    </figure>
-                                    <figure class="research-image">
-                                        <img src="OC_kappa_2.png" alt="Your Photo">
-                                        <figcaption>Fig d: Illustration of showing bounded components does not seem to be a serious constraint for 3-colorable graphs.</figcaption>
-                                    </figure>        
-                                </div>
-                            </details>
-                            </i>
-                            <br>
-                        </ol>
-                    </div>
-
 
                     <div id="math" class="inner-tab-content" style="display:none;">
                         <p>Math is at the core of theoretical computer science study. </p>
