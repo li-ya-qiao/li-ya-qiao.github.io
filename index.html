@@ -26,7 +26,6 @@
             padding: 20px;
         }
 
-        /* Adjusted width here to make the image smaller */
         .profile-image {
             flex: 0 0 200px; 
             margin-left: 20px;
@@ -39,21 +38,25 @@
             border-radius: 8px;
         }
 
+        /* Adjusted the container and image classes to make summaries look better */
         .research-images-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 0px;
+            gap: 20px; /* Added gap to space multiple images out evenly */
+            margin: 15px 0; /* Added margin for better flow with the text */
         }
 
         .research-image {
             width: fit-content;
+            max-width: 100%;
             text-align: center;
         }
 
         .research-image img {
             max-width: 100%;
-            height: auto;
+            max-height: 200px; /* Limits the height to ensure uniform, smaller size */
+            width: auto;
             border-radius: 8px;
             display: block;
             margin: 0 auto; 
@@ -64,6 +67,9 @@
             font-size: smaller;
             text-align: center;
             margin-top: 5px;
+            max-width: 300px; /* Keeps captions nicely wrapped under smaller images */
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .tabs {
